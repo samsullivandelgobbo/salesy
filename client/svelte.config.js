@@ -9,8 +9,11 @@ const config = {
     }),
   ],
   kit: {
-    adapter: adapter()
-  }
+    adapter: adapter(),
+    methodOverride: {
+      allowed: ['PATCH', 'DELETE'],
+    },
+  },
 };
 
 export default config;
