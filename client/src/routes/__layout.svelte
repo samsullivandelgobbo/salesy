@@ -10,7 +10,7 @@
     </button>
   </div>
   <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a class="btn btn-ghost normal-case text-xl">Newmarket Hyundai</a>
   </div>
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
@@ -21,5 +21,5 @@
 </nav>
 
 <slot>
-  
+
 </slot>

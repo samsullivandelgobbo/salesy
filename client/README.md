@@ -1,38 +1,30 @@
-# create-svelte
+## TODO
+# UPLOAD PAGE
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+UPLOAD IMAGES => PREVIEW IMAGES (STORE IMAGES IN TMP DIRECTORY IN /sales-mgmt)
+=> GET OTHER FIELDS AND POST TO DB => STORE IMAGES ON FILE SERVER AND POST TO DB WHERE TO GET THEM UNDER
 
-## Creating a project
+## IDEAS / how to get this to work
 
-If you're seeing this, you've probably already done this step. Congrats!
+get stock number from filename of images if exists
 
-```bash
-# create a new project in the current directory
-npm init svelte
+mongoose upload images document?
 
-# create a new project in my-app
-npm init svelte my-app
-```
+## CREDIT SCORE CHECK / PRE APPROVAL
 
-## Developing
+NEED MATH FORMULA FOR CREDIT APPROVAL
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# example:
 
-```bash
-npm run dev
+variables:
+monthly income
+credit range estimate 
+years at current house - run check on housing and average prices incomes and other traits of the area 
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+pre existing customer data mining: 
 
-## Building
+address
+age
 
-To create a production version of your app:
+running analysis on customers ??
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
