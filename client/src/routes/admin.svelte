@@ -34,5 +34,6 @@
     id="password"
     bind:value={password}
     />
+    <button class="btn" type="button" on:click={postUser}>Submit </button>
   </div>
 </div>
