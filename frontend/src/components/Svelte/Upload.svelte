@@ -1,14 +1,14 @@
 <script>
   
   
-  let stockNum = "stockNum"
-  let make = "make"
-  let model = "model"
-  let year = "year"
-  let price = "price"
+  export let stockNum = "stockNum"
+  export let make = "make"
+  export let model = "model"
+  export let year = "year"
+  export let price = "price"
 
-  async function postVehicle() {
-    const res = await fetch("http://localhost:4000/Inventory", {
+  export async function postVehicle() {
+    const res = await fetch("http://localhost:4000/inventory", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

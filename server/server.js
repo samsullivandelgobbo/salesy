@@ -20,18 +20,18 @@ mongoose
 //registering cors
 app.use(cors());
 //configure body parser
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 //configure body-parser ends here
 app.use(morgan("dev")); // configire morgan
 
 app.use('/uploads', express.static('uploads'));
 // define first route
-app.get("/", (req, res) => {
-  res.json("Hello, welcome to the shitty Api i made");
-});
+// app.get("/", (req, res) => {
+//   res.json("Hello, welcome to the shitty Api i made");
+// });
 
-const inventoryRoutes = require('./api/routes/inventory')
+const inventoryRoutes = require('./api/routes/inventoryRoutes')
 app.use('/inventory', inventoryRoutes)
 
 app.listen(PORT, () => {

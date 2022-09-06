@@ -1,9 +1,4 @@
 <script>
-  let images
-  
-  async function submitForm(){
-    
-  }
 
   let stockNum = "stockNum"
   let make = "make"
@@ -15,7 +10,7 @@
     const res = await fetch("http://localhost:4000/Inventory", {
       method: "POST",
       headers: {
-        'Content-Type': 'multipart/form-data'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         stockNum,

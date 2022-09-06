@@ -4,20 +4,29 @@ class BaseService {
   }
 
   async add(objects) {
-    return await this.model.save(objects)
+    return await this.model.create(objects)
   }
-
+  async addMultiple(objects) {
+    return await this.model.insertMany(objects)
+  }
+//default filter by
+//figure out
   async loadList() {
     return await this.model.find()
   }
 
   async loadOne(id) {
-    return await this.model.findBy(id)
+    return await this.model.findBy()
   }
 
   async update(id, object) {
     return await this.model.findByIdAndUpdate(id, object)
   }
+
+  async delete(id) {
+    return await this.model.findOneAndDelete(id)
+  }
 }
+
 
 module.exports = BaseService

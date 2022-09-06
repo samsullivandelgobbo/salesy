@@ -1,9 +1,3 @@
----
-import Upload from '../../components/Svelte/Upload.svelte';
-
-
----
-<html lang="en">
 <nav>
   <div class="navbar bg-base-100">
     <div class="flex-none">
@@ -21,6 +15,3 @@ import Upload from '../../components/Svelte/Upload.svelte';
     </div>
   </div>
   </nav>
-  
-<Upload />
-</html>
