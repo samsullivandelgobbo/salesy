@@ -6,12 +6,7 @@ exports.addPhoto = async (req, res) => {
   try {
       const jsondata = JSON.parse(req.body.jsondata)
     const newVehicle = await inventoryService.addVehicle(jsondata)
-      console.log(typeof(req.body.jsondata))
-      console.log(typeof(JSON.parse(req.body.jsondata)))
-      console.log(req.body.jsondata)
-      console.log(req.file)
-      const parseddata = JSON.parse(req.body.jsondata)
-      console.log(parseddata)
+ 
     
     res.status(200).send(newVehicle)
   } catch (err) {

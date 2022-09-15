@@ -2,13 +2,12 @@ const express = require('express')
 const router = express.Router()
 const inventoryController = require('../controllers/inventoryController')
 const Vehicle = require('../models/vehicleModel')
-const multer = require('multer')
-const upload = multer({ dest: 'uploads/'})
+const uploadMW = require('../middleware/multer')
 
 router.post('/updatebyid', inventoryController.updateOne)
 router.get('/', inventoryController.loadAll)
 router.post('/', inventoryController.addNew)
-router.post('/vehicleimages', upload.single('file'), inventoryController.addPhoto)
+router.post('/vehicleimages', uploadMW.array('file[]'), inventoryController.addPhoto)
 
 // function (req, res, next) {
 //   console.log(req.body)

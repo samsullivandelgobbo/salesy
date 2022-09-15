@@ -7,16 +7,27 @@
   let model:any
   let year:any
   let price:any
+  
+ 
   async function doPost() {
 
     let data = { stockNum, make, model, year, price }
+    let filelen = files.length
+    console.log(filelen)
     let jsondata = JSON.stringify(data)
-    formData.append('file', files[0])
+    formData.append('filelength', filelen)
     formData.append('jsondata', jsondata)
+    for (let x = 0; x < filelen; x++) {
+      formData.append('file[]', files[x])
+    }
+    
+    
     const doPost = await axios({
       method: 'post',
       url: 'http://localhost:4000/inventory/vehicleimages',
-      data: formData
+      data: formData,
+      contentType: false,
+      processData: false,
     })
     .then(function (response) {
       console.log(response)
