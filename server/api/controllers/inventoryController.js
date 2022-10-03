@@ -61,6 +61,7 @@ exports.getOne = async (req, res) => {
 exports.deleteOne = async (req, res) => {
   try {
     const vehicle = await inventoryService.deleteVehicle(req.body)
+    res.status(200).send(vehicle)
   } catch (err) {
     res.status(500).json(err)
   }

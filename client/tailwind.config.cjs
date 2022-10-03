@@ -1,7 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   daisyui: {
-    themes: ["dark"]
+    themes: [
+      {
+        mytheme: {
+        
+"primary": "#e4dcd3",
+        
+"secondary": "#032d61",
+        
+"accent": "#969594",
+        
+"neutral": "#e4dcd3",
+        
+"base-100": "#FFFFFF",
+        
+"info": "#a5f3fc",
+        
+"success": "#3CE281",
+        
+"warning": "#F1C227",
+        
+"error": "#E43A4D",
+        },
+      },
+    ],
   },
   content: ["./src/**/*.{svelte, js, html}"],
   theme: {

@@ -1,28 +1,39 @@
-<script>
+<script lang="ts">
+  import axios from 'axios'
+  export let formData = new FormData()
+  export let files
+  export let stockNum:any
+  export let make:any
+  export let model:any
+  export let year:any
+  export let price:any
 
-  let stockNum = "stockNum"
-  let make = "make"
-  let model = "model"
-  let year = "year"
-  let price = "price"
-
-  async function postVehicle() {
-    const res = await fetch("http://localhost:4000/Inventory", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        stockNum,
-        make,
-        model,
-        year,
-        price
-      }),
+  
+ 
+  async function doPost() {
+    let mediaPath = `http://localhost:4000/uploads/${ stockNum }/`
+    let filelen = files.length
+    let data = { stockNum, make, model, year, price, mediaPath }
+    let jsondata = JSON.stringify(data)
+    formData.append('jsondata', jsondata)
+    for (let x = 0; x < filelen; x++) {
+      formData.append('file[]', files[x])
+    }
+    
+    
+    const doPost = await axios({
+      method: 'post',
+      url: 'http://localhost:4000/inventory/vehicleimages',
+      data: formData,
+      contentType: false,
+      processData: false,
     })
-    const json = await res.json()
-    
-    
+    .then(function (response) {
+      console.log(response)
+    })
+    .catch(function (response) {
+      console.log(response)
+    })
   }
 </script>
 
@@ -51,9 +62,10 @@
       </div>
       <div>
         <label for ="upload" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Upload Photos:</label>
-        <input type="file" id="upload" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" multiple>
+        <input type="file" bind:files id="upload" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" multiple>
 
       </div>
 
-  <button type="submit" on:click={postVehicle} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  <button type="submit" on:click={doPost} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 </form>
+

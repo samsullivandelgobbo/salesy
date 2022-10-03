@@ -38,7 +38,7 @@ const inventorySchema = mongoose.Schema({
     type: String,
     maxlength: 200,
   },
-  media: {
+  mediaPath: {
     type: String,
   },
   category: {

@@ -7,15 +7,13 @@
   let model:any
   let year:any
   let price:any
+  let mediaPath = stockNum
   
  
   async function doPost() {
-
-    let data = { stockNum, make, model, year, price }
     let filelen = files.length
-    console.log(filelen)
+    let data = { stockNum, make, model, year, price, mediaPath }
     let jsondata = JSON.stringify(data)
-    formData.append('filelength', filelen)
     formData.append('jsondata', jsondata)
     for (let x = 0; x < filelen; x++) {
       formData.append('file[]', files[x])
