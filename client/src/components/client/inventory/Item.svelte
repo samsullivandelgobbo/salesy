@@ -16,12 +16,10 @@
 
 
 </script>
-<div class="grid grid-cols-3 gap-4 content-start">
+<div class="grid grid-cols-3 gap-4 content-start px-6 py-4">
 {#if items}
   {#each items as item, i}
-  <div class="">
     <InventoryList {item} {i}/>
-  </div>
   {/each}
 {/if}
 </div>
