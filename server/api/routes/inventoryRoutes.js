@@ -10,6 +10,6 @@ router.post('/vehicleimages', uploadMW.array('file[]'), inventoryController.addP
 router.delete('/', inventoryController.deleteOne)
 
 router.get('/', inventoryController.loadAll)
-router.get(':id', inventoryController.getOne)
+router.get('/:id', inventoryController.getOne)
 
 module.exports = router

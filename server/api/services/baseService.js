@@ -16,7 +16,7 @@ class BaseService {
   }
 
   async loadOne(id) {
-    return await this.model.findBy()
+    return await this.model.find({ stockNum: id })
   }
 
   async update(id, object) {

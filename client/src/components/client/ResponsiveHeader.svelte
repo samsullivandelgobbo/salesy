@@ -1,90 +1,94 @@
-<div class="navbar bg-primary">
+<div class="navbar bg-primary z-50">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52 ">
         <li tabindex="0">
-          <a class="justify-between">
+          <a href="/inventory" class="justify-between">
             Inventory
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
           </a>
-          <ul class="p-2 bg-primary">
-            <li><a>Used Inventory</a></li>
-            <li><a>New Inventory</a></li>
+          <ul class="p-2 bg-primary z-50">
+            <li><a href="/inventory/used" >Used Inventory</a></li>
+            <li><a href="inventory/new/">New Inventory</a></li>
           </ul>
         </li>
         <li tabindex="0">
-          <a class="justify-between">
+          <a href="/service" class="justify-between">
             Service
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
           </a>
           <ul class="p-2 bg-primary">
-            <li><a>Schedule Appointment</a></li>
-            <li><a>Message us</a></li>
+            <li><a href="/service/book">Schedule Appointment</a></li>
+            <li><a href="about/contact">Message us</a></li>
           </ul>
         </li>
-        <li><a>Financing</a></li>
+        <li><a href="/finance">Financing</a></li>
         <li tabindex="0">
-          <a class="justify-between">
+          <a href="/about" class="justify-between">
             About us
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
           </a>
           <ul class="p-2 bg-primary">
-            <li><a>Contact us</a></li>
-            <li><a>FAQs</a></li>
+            <li><a href="/about/contact">Contact us</a></li>
+            <li><a href="/about/faq">FAQs</a></li>
           </ul>
         </li>
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl">Newmarket Hyundai <svg
-      width="24px"
-      height="24px"
-      viewBox="-5 0 30 24"
+
+    <a href="/" class="btn btn-ghost normal-case text-xl">Newmarket Hyundai 
+      <svg
+      class="sm:hidden md:flex"
+      width="32px"
+      height="32px"
+      viewBox="-6 0 31 24"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       ><path
         d="M11.999 18.145c6.627 0 12.001-2.751 12.001-6.144 0-3.395-5.374-6.146-12.001-6.146C5.374 5.855 0 8.606 0 12.001c0 3.393 5.374 6.144 11.999 6.144m2.26-3.015c-.2.464-.545 1.454-1.336 1.85-.24.119-.537.174-.8.185H12c-2.214 0-4.276-.31-6.002-.834l-.066-.025c-.16-.053-.24-.127-.24-.218 0-.079.043-.14.099-.195l.109-.097c.4-.332 1.598-1.2 3.858-2.067.793-.301 1.786-.679 2.825-.9.608-.126 2.868-.473 1.675 2.301m6.062-6.194c.043-.074.1-.137.203-.142.056-.006.132.007.248.08 1.409.867 2.245 1.952 2.245 3.125 0 2.118-2.724 3.94-6.62 4.735-.248.05-.416.048-.471-.015-.04-.038-.05-.106 0-.19a.815.815 0 0 1 .104-.145c2.12-2.5 3.736-6.189 4.195-7.253.035-.074.068-.147.096-.195M9.777 8.857c.2-.463.545-1.454 1.335-1.846.24-.12.537-.178.8-.185.061-.002.104 0 .12 0 2.217 0 4.276.306 6.004.833.013.006.053.02.066.025.16.054.24.127.24.218 0 .079-.042.137-.098.193a1.89 1.89 0 0 1-.11.096c-.397.335-1.598 1.201-3.858 2.068-.795.304-1.786.679-2.822.899-.61.13-2.87.474-1.677-2.3M7.6 7.264c.25-.048.415-.048.476.015.035.04.045.106-.002.19a.89.89 0 0 1-.104.142c-2.12 2.503-3.737 6.189-4.198 7.256a2.313 2.313 0 0 1-.096.195c-.04.073-.099.136-.2.142-.056.005-.135-.011-.251-.081C1.817 14.256.98 13.172.98 11.999c0-2.118 2.724-3.94 6.62-4.735z"
       /></svg
     ></a>
+
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">
       <li tabindex="0">
-        <a>
+        <a href="/inventory">
           Inventory
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul class="p-2 bg-primary">
-          <li><a>Used Inventory</a></li>
-          <li><a>New Inventory</a></li>
+        <ul class="p-2 bg-primary z-50">
+          <li><a href="/inventory/used">Used Inventory</a></li>
+          <li><a href="/inventory/new">New Inventory</a></li>
         </ul>
       </li>
       <li tabindex="0">
-        <a>
+        <a href="/service">
           Service
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul class="p-2 bg-primary">
-          <li><a>Schedule Appointment</a></li>
-          <li><a>Message us</a></li>
+        <ul class="p-2 bg-primary z-50">
+          <li><a href="/service/book">Schedule Appointment</a></li>
+          <li><a href="/about/contact">Message us</a></li>
         </ul>
       </li>
-      <li><a>Financing</a></li>
+      <li><a href="/finance">Financing</a></li>
       <li tabindex="0">
-        <a>
+        <a href="/about">
           About us
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul class="p-2 bg-primary">
-          <li><a>Contact us</a></li>
-          <li><a>FAQs</a></li>
+        <ul class="p-2 bg-primary z-50">
+          <li><a href="/about/contact">Contact us</a></li>
+          <li><a href="/about/faq">FAQs</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">Get started</a>
+    <a href="/login" class="btn">Get started</a>
   </div>
 </div>

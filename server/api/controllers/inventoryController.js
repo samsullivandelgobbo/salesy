@@ -49,10 +49,14 @@ exports.loadAll = async (req, res) => {
 
 exports.getOne = async (req, res) => {
   try {
-    const vehicle = await inventoryService.getVehicle(req.body)
+    console.log(req.params.id)
+    console.log(req.body)
+    console.log(req.stockNum)
+    const vehicle = await inventoryService.getVehicle(req.params.id)
+    console.log('controller.js')
     res.status(200).send(vehicle)
   } catch (err) {
-    res.status(500).json(err)
+    // res.status(500).json(err)
   }
 }
 

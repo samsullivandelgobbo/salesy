@@ -1,4 +1,4 @@
 <script lang="ts">
-  import InventoryList from "../../components/client/InventoryList.svelte";
+  import Item from "../../components/client/inventory/Item.svelte"
 </script>
-<InventoryList/>
+<Item/>
