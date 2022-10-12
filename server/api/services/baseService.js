@@ -9,23 +9,24 @@ class BaseService {
   async addMultiple(objects) {
     return await this.model.insertMany(objects)
   }
-//default filter by
-//figure out
+
   async loadList() {
     return await this.model.find()
   }
 
-  async loadOne(id) {
-    return await this.model.find({ stockNum: id })
+  async loadByField(field, id) {
+    return await this.model.find({ [field]: id })
   }
+  
 
-  async update(id, object) {
-    return await this.model.findByIdAndUpdate(id, object)
+  async update(id, field, update) {
+    return await this.model.findByIdAndUpdate(id, {[field]: update})
   }
 
   async delete(id) {
     return await this.model.findOneAndDelete(id)
   }
+  
 }
 
 

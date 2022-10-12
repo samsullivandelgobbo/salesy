@@ -34,12 +34,18 @@ const inventorySchema = mongoose.Schema({
     drivetrain: String,
     platform: String,
   },
+  location: {
+    String
+  },
   notes: {
     type: String,
     maxlength: 200,
   },
   mediaPath: {
     type: String,
+  },
+  photos: {
+      type: String,
   },
   category: {
     type: 'ObjectId',

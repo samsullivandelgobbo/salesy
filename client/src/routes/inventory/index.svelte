@@ -1,5 +1,46 @@
 <script lang="ts">
   import Item from "../../components/client/inventory/Item.svelte"
+  import { onMount } from "svelte";
+  import axios from "axios";
+  
+  let data
+  let items
+  let makes = []
+  let prices = []
+  let years = []
+  let uniqyears
+  let uniqprices
+  let uniqmakes
+  
+  onMount(async () => {
+    data = await axios.get('http://localhost:4000/inventory/')
+    items = data.data
+    for (let i = 0; i < items.length; i++) {
+      makes.push(items[i].make)
+    }
+    for (let i = 0; i < items.length; i++) {
+      prices.push(items[i].price)
+    }
+    for (let i = 0; i < items.length; i++) {
+      years.push(items[i].year)
+    }
+    uniqyears = [...new Set(years)]
+    uniqprices = [...new Set(prices)]
+    uniqmakes = [...new Set(makes)]
+    console.log(uniqyears)
+    console.log(uniqmakes)
+    console.log(uniqprices)
+    console.log(years)
+
+
+  
+})
+  async function sortVehicles () {
+        data = await axios.get(`http://localhost:4000/inventory/year/1`)
+        items = data.data
+        console.log(items)
+  }
+
 </script>
 
 <div class="drawer drawer-mobile">
@@ -28,7 +69,7 @@
           <div class="input-group">
             <input
               type="text"
-              placeholder="Search…"
+              placeholder="Search Vehicles"
               class="input input-bordered"
             />
             <button class="btn btn-square">
@@ -52,36 +93,29 @@
       <div class="flex-none hidden lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar menu content here -->
+          <input type="checkbox" class="toggle" on:change={sortVehicles} />
           <li>
-            <select class="select w-full max-w-xs">
-              <option disabled selected>Pick your favorite Simpson</option>
-              <option>Homer</option>
-              <option>Marge</option>
-              <option>Bart</option>
-              <option>Lisa</option>
-              <option>Maggie</option>
-            </select>
-          </li>
-          <li>
-            <select class="select w-full max-w-xs">
-              <option disabled selected>Pick your favorite Simpson</option>
-              <option>Homer</option>
-              <option>Marge</option>
-              <option>Bart</option>
-              <option>Lisa</option>
-              <option>Maggie</option>
+            <select class="select w-full min-w-24">
+              <option disabled selected>Sort By</option>
+              {#if uniqmakes}
+                {#each uniqmakes as make}
+                  <option>{make}</option>
+                {/each}
+              {/if}
             </select>
           </li>
         </ul>
       </div>
     </div>
-    <Item />
+    
+    <Item items={items} data={data} />
   </div>
   <div class="drawer-side">
     <label for="my-drawer-3" class="drawer-overlay" />
     <ul class="menu p-4 overflow-y-auto w-60 bg-base-100">
       <!-- Sidebar content here -->
-      
+      <h1>Filter Vehicles</h1>
+      <h1>Price</h1>
       <li>
         <input
           type="range"
@@ -89,46 +123,45 @@
           max="100"
           value="40"
           class="range range-primary"
+          
         />
+        <p>0</p>
       </li>
       <li>
-        <select class="select w-full max-w-xs">
-          <option disabled selected>Pick your favorite Simpson</option>
-          <option>Homer</option>
-          <option>Marge</option>
-          <option>Bart</option>
-          <option>Lisa</option>
-          <option>Maggie</option>
+        <select class="select w-full max-w-m">
+          <option disabled selected>Year</option>
+          {#if uniqyears}
+            {#each uniqyears as year}
+              <option>{year}</option>
+            {/each}
+          {/if}
         </select>
-      </li>
-      <li>
-        <select class="select w-full max-w-xs">
-          <option disabled selected>Pick your favorite Simpson</option>
-          <option>Homer</option>
-          <option>Marge</option>
-          <option>Bart</option>
-          <option>Lisa</option>
-          <option>Maggie</option>
+      </li>          <li>
+        <select class="select w-full max-w-m">
+          <option disabled selected>Manufacturer</option>
+          {#if uniqyears}
+            {#each uniqyears as year}
+              <option>{year}</option>
+            {/each}
+          {/if}
         </select>
-      </li>
-      <li>
-        <select class="select w-full max-w-xs">
-          <option disabled selected>Pick your favorite Simpson</option>
-          <option>Homer</option>
-          <option>Marge</option>
-          <option>Bart</option>
-          <option>Lisa</option>
-          <option>Maggie</option>
+      </li>          <li>
+        <select class="select w-full max-w-m">
+          <option disabled selected>Model</option>
+          {#if uniqyears}
+            {#each uniqyears as year}
+              <option>{year}</option>
+            {/each}
+          {/if}
         </select>
-      </li>
-      <li>
-        <select class="select w-full max-w-xs">
-          <option disabled selected>Pick your favorite Simpson</option>
-          <option>Homer</option>
-          <option>Marge</option>
-          <option>Bart</option>
-          <option>Lisa</option>
-          <option>Maggie</option>
+      </li>          <li>
+        <select class="select w-full max-w-m">
+          <option disabled selected>Fuel</option>
+          {#if uniqyears}
+            {#each uniqyears as year}
+              <option>{year}</option>
+            {/each}
+          {/if}
         </select>
       </li>
     </ul>
