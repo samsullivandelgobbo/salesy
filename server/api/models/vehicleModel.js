@@ -4,7 +4,7 @@ const inventorySchema = mongoose.Schema({
   stockNum: {
     type: String,
     required: true,
-    unique: true,
+    unique: true
   },
   make: {
     type: String,
@@ -22,6 +22,20 @@ const inventorySchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  color: {
+    type: String,
+    required: true
+  },
+  vin: {
+    type: String,
+  },
+  odometer: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+  },
   dateIn: {
     type: Date,
     default: Date.now,
@@ -31,8 +45,10 @@ const inventorySchema = mongoose.Schema({
   },
   specs: {
     engine: String,
+    fuel: String,
     drivetrain: String,
     platform: String,
+    transmission: String,
   },
   location: {
     String
@@ -44,13 +60,9 @@ const inventorySchema = mongoose.Schema({
   mediaPath: {
     type: String,
   },
-  photos: {
+  photos: [{
       type: String,
-  },
-  category: {
-    type: 'ObjectId',
-    ref: 'Category',
-  },
+  }],
   sold: {
     type: Boolean,
     required: true,

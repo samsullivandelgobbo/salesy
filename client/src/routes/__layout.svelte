@@ -6,10 +6,11 @@
 </script>
 
 <Header/>
-
+<main data-sveltekit-prefetch>
 <slot>
 
 </slot>
+</main>
 
 <BottomNavbar/>
 

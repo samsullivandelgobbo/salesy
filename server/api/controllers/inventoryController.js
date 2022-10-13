@@ -1,19 +1,40 @@
 const inventoryService = require('../services/inventoryService');
-const multer = require('multer')
+const multer = require('multer');
+const {json}=require('body-parser');
 const upload = multer({ dest: 'uploads/'})
 
 exports.addNew = async (req, res) => {
   try {
+    let photos = []
     console.log('POST Photo:')
     const jsondata = JSON.parse(req.body.jsondata)
+    for (let x = 0;x < jsondata.filelen; x++) {
+      photos.push(jsondata.mediaPath + jsondata.stockNum + x + '.jpg')
+    }
+    jsondata.photos = photos
+    delete jsondata.filelen
     console.log(jsondata)
+
     const newVehicle = await inventoryService.addVehicle(jsondata)
     res.status(200).send(newVehicle)
   } catch (err) {
     res.status(500).json(err)
     
+    
   }
 } 
+exports.findByMultiple = async (req, res) => {
+  try {
+    const field = req.query.f
+    const value = req.query.v
+
+    const vehicle = await inventoryService.getByMultiple(field, value)
+    res.status(200).send(vehicle)
+  } catch (err) {
+    res.status(500).json(err)
+  }
+}
+
 exports.loadAll = async (req, res) => {
   try {
     const vehicles = await inventoryService.getAll()

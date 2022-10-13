@@ -14,6 +14,8 @@ router.post('/update/customer', inventoryController.updateCustomer)
 router.post('/update/location', inventoryController.updateSoldState)
 
 router.get('/', inventoryController.loadAll)
+
+router.get('/multiple', inventoryController.findByMultiple)
 router.get('/year/:id', inventoryController.findByYear)
 router.get('/price/:id', inventoryController.findByPrice)
 router.get('/make/:id', inventoryController.findByMake)

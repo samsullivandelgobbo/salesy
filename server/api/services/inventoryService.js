@@ -42,7 +42,9 @@ class InventoryService extends BaseService {
   async getVehicleByLocation(id) {
     return this.loadByField('location', id)
   }
-
+  async getByMultiple(field, value) {
+    return this.findbyMultiple(field, value)
+  }
 }
 
 

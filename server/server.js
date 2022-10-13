@@ -25,6 +25,10 @@ app.use(bodyParser.json());
 //configure body-parser ends here
 app.use(morgan("dev")); // configire morgan
 
+app.use(function(err, req, res, next) {
+  console.log(err);
+  next(err);
+})
 app.use('/uploads', express.static('uploads'));
 // define first route
 // app.get("/", (req, res) => {

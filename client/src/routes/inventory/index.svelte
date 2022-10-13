@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Item from "../../components/client/inventory/Item.svelte"
+  import VehicleList from "../../components/client/inventory/InventoryList.svelte"
   import { onMount } from "svelte";
   import axios from "axios";
   
@@ -8,9 +8,13 @@
   let makes = []
   let prices = []
   let years = []
+  let colors = []
+  let fuel = []
+  let uniqcolors
   let uniqyears
   let uniqprices
   let uniqmakes
+  let uniqfuel
   
   onMount(async () => {
     data = await axios.get('http://localhost:4000/inventory/')
@@ -24,19 +28,25 @@
     for (let i = 0; i < items.length; i++) {
       years.push(items[i].year)
     }
+    // for (let i = 0; i < items.length; i++) {
+    //   fuel.push(items[i].specs.fuel)
+    // }
+    for (let i = 0; i < items.length; i++) {
+      colors.push(items[i].color)
+    }
+    uniqcolors = [...new Set(colors)]
+    uniqfuel = [...new Set(fuel)]
     uniqyears = [...new Set(years)]
     uniqprices = [...new Set(prices)]
     uniqmakes = [...new Set(makes)]
-    console.log(uniqyears)
-    console.log(uniqmakes)
-    console.log(uniqprices)
-    console.log(years)
+    console.log(uniqmakes, uniqprices, uniqfuel, uniqyears, uniqcolors)
+
 
 
   
 })
-  async function sortVehicles () {
-        data = await axios.get(`http://localhost:4000/inventory/year/1`)
+  async function sortVehicles (query) {
+        data = await axios.get(`http://localhost:4000/inventory/year/${query}`)
         items = data.data
         console.log(items)
   }
@@ -93,77 +103,100 @@
       <div class="flex-none hidden lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar menu content here -->
-          <input type="checkbox" class="toggle" on:change={sortVehicles} />
-          <li>
-            <select class="select w-full min-w-24">
-              <option disabled selected>Sort By</option>
-              {#if uniqmakes}
-                {#each uniqmakes as make}
-                  <option>{make}</option>
-                {/each}
-              {/if}
-            </select>
-          </li>
+          <select class="select w-full max-w-xs">
+            <option disabled selected>Sort Vehicles</option>
+            <option on:select={sortVehicles}>Feautured</option>
+            <option>Year - High</option>
+            <option>Year - Low</option>
+            <option>Price - High</option>
+            <option>Price - Low</option>
+          </select>
         </ul>
       </div>
     </div>
-    
-    <Item items={items} data={data} />
+
+
+    <VehicleList items={items} data={data} />
   </div>
   <div class="drawer-side">
     <label for="my-drawer-3" class="drawer-overlay" />
     <ul class="menu p-4 overflow-y-auto w-60 bg-base-100">
       <!-- Sidebar content here -->
-      <h1>Filter Vehicles</h1>
-      <h1>Price</h1>
-      <li>
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value="40"
-          class="range range-primary"
-          
-        />
-        <p>0</p>
-      </li>
-      <li>
-        <select class="select w-full max-w-m">
-          <option disabled selected>Year</option>
+
+      
+      <div class="collapse">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">
+          Filter by Years
+        </div>
+        <div class="collapse-content"> 
           {#if uniqyears}
-            {#each uniqyears as year}
-              <option>{year}</option>
-            {/each}
-          {/if}
-        </select>
-      </li>          <li>
-        <select class="select w-full max-w-m">
-          <option disabled selected>Manufacturer</option>
+          {#each uniqyears as year}
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">{year}</span> 
+              <input type="checkbox" on:click={sortVehicles(year)} class="checkbox" />
+            </label>
+          </div>
+          {/each}
+        {/if}
+        </div>
+      </div>
+
+      <div class="collapse">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">
+          Filter by Fuel Type
+        </div>
+        <div class="collapse-content"> 
           {#if uniqyears}
-            {#each uniqyears as year}
-              <option>{year}</option>
-            {/each}
-          {/if}
-        </select>
-      </li>          <li>
-        <select class="select w-full max-w-m">
-          <option disabled selected>Model</option>
+          {#each uniqyears as year}
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">{year}</span> 
+              <input type="checkbox"  class="checkbox" />
+            </label>
+          </div>
+          {/each}
+        {/if}
+        </div>
+      </div>
+      <div class="collapse">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">
+          Filter by Colour
+        </div>
+        <div class="collapse-content"> 
           {#if uniqyears}
-            {#each uniqyears as year}
-              <option>{year}</option>
-            {/each}
-          {/if}
-        </select>
-      </li>          <li>
-        <select class="select w-full max-w-m">
-          <option disabled selected>Fuel</option>
+          {#each uniqyears as year}
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">{year}</span> 
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </div>
+          {/each}
+        {/if}
+        </div>
+      </div>
+      <div class="collapse">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">
+          Filter by Manufacturer
+        </div>
+        <div class="collapse-content"> 
           {#if uniqyears}
-            {#each uniqyears as year}
-              <option>{year}</option>
-            {/each}
-          {/if}
-        </select>
-      </li>
+          {#each uniqmakes as make}
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">{make}</span> 
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </div>
+          {/each}
+        {/if}
+        </div>
+      </div>
     </ul>
   </div>
 </div>

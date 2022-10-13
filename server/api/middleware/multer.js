@@ -2,8 +2,8 @@ const multer = require('multer')
 const path = require('path')
 const fs = require('fs')
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    let stockNum = JSON.parse(req.body.jsondata).stockNum
+  destination: async function (req, file, cb) {
+    let stockNum = await JSON.parse(req.body.jsondata).stockNum
     if (fs.existsSync(path.join('uploads/', stockNum))) {
       console.log('Directory Exists')
     } else {  

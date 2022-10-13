@@ -18,13 +18,15 @@ class BaseService {
     return await this.model.find({ [field]: id })
   }
   
-
   async update(id, field, update) {
     return await this.model.findByIdAndUpdate(id, {[field]: update})
   }
 
   async delete(id) {
     return await this.model.findOneAndDelete(id)
+  }
+  async findbyMultiple(field, value) {
+    return await this.model.find({[field]: value})
   }
   
 }

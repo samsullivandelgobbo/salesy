@@ -36,6 +36,12 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {},
+    fontFamily: {
+      sans: ['Hyundai Sans', 'sans-serif'],
+      heading: ['Hyundai Sans', 'sans-serif']
+    }
   },
-  plugins: [require('daisyui')],
+  plugins: [
+    require('daisyui'),
+  ],
 }
