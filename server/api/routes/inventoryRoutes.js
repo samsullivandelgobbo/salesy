@@ -3,8 +3,9 @@ const router = express.Router()
 const inventoryController = require('../controllers/inventoryController')
 const Vehicle = require('../models/vehicleModel')
 const uploadMW = require('../middleware/multer')
+const userAuth = require('../middleware/userAuth')
 
-router.post('/addvehicle', uploadMW.array('file[]'), inventoryController.addNew)
+router.post('/addvehicle', userAuth.Auth ,uploadMW.array('file[]'), inventoryController.addNew)
 
 router.post('/update/sold', inventoryController.updateSoldState)
 router.post('/update/stocknum', inventoryController.updateStockNum)

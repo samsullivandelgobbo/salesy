@@ -6,7 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const config = require("./config/connection");
 const app = express();
-
+const inventoryRoutes = require('./api/routes/inventoryRoutes')
+const userRoutes = require('./api/routes/userRoutes')
 
 mongoose
   .connect(config.database, { useNewUrlParser: true })
@@ -29,13 +30,11 @@ app.use(function(err, req, res, next) {
   console.log(err);
   next(err);
 })
-app.use('/uploads', express.static('uploads'));
-// define first route
-// app.get("/", (req, res) => {
-//   res.json("Hello, welcome to the shitty Api i made");
-// });
 
-const inventoryRoutes = require('./api/routes/inventoryRoutes')
+app.use('/user', userRoutes)
+
+app.use('/uploads', express.static('uploads'));
+
 app.use('/inventory', inventoryRoutes)
 
 app.listen(PORT, () => {

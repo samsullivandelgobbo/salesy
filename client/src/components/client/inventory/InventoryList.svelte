@@ -7,7 +7,7 @@
   export let data
 </script>
 
-<div class="grid grid-cols-3 gap-4 content-start px-6 py-4">
+<div class="grid lg:grid-cols-3 gap-4 content-start px-6 py-4">
 {#if items}
   {#each items as item}
     <VehicleCard {item}/>

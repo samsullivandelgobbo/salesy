@@ -1,5 +1,6 @@
 <script lang="ts">
   export let item
+  let title =  item.year + " " + item.make + " " + item.model
 </script>
 
 <div class="card card-compact bg-base-100 shadow-xl">
@@ -7,20 +8,33 @@
     <img src={item.mediaPath + item.stockNum + "0.jpg"} alt="Car" />
   </figure>
   <div class="card-body">
-    <h2 class="card-title">{item.year + " " + item.make + " " + item.model}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div class="card-actions justify-end">
+    <h2 class="card-title">
+          {title}
+    </h2>
+    <div class="flex flex-col lg:flex-row font-medium text-base">
+      <div class="basis-1/2">
+        ${item.price}
+      </div>
+      <div class="basis-1/2 lg:text-right">
+        {item.odometer} KM
+      </div>
+  </div>
+    <div class="card-actions place-content-end">
       <!-- The button to open modal -->
 
       <label for="my-modal-{item.stockNum}" class="btn modal-button">view</label
       >
 
       <!-- Put this part before </body> tag -->
-      <input type="checkbox" id="my-modal-{item.stockNum}" class="modal-toggle" />
+      <input
+        type="checkbox"
+        id="my-modal-{item.stockNum}"
+        class="modal-toggle"
+      />
       <label for="my-modal-{item.stockNum}" class="modal cursor-pointer">
         <div class="modal-box">
-          <h3 class="text-lg font-bold">
-            Congratulations random Internet user!
+          <h3 class="text-lg font-medium">
+            {title}
           </h3>
           <figure>
             <div class="carousel w-full">

@@ -28,12 +28,23 @@
     for (let i = 0; i < items.length; i++) {
       years.push(items[i].year)
     }
-    // for (let i = 0; i < items.length; i++) {
-    //   fuel.push(items[i].specs.fuel)
-    // }
+    for (let i = 0; i < items.length; i++) {
+      console.log('before if')
+      if (items[i].specs) {
+        console.log('if')
+        fuel.push(items[i].specs.fuel)
+      }
+      else {
+        continue
+      }
+    }
+    console.log(fuel)
+    
     for (let i = 0; i < items.length; i++) {
       colors.push(items[i].color)
     }
+    console.log(items.specs)
+    console.log(items)
     uniqcolors = [...new Set(colors)]
     uniqfuel = [...new Set(fuel)]
     uniqyears = [...new Set(years)]
@@ -45,8 +56,8 @@
 
   
 })
-  async function sortVehicles (query) {
-        data = await axios.get(`http://localhost:4000/inventory/year/${query}`)
+  async function sortVehicles (query, value) {
+        data = await axios.get(`http://localhost:4000/inventory/${query}/${value}`)
         items = data.data
         console.log(items)
   }
@@ -135,7 +146,7 @@
           <div class="form-control">
             <label class="label cursor-pointer">
               <span class="label-text">{year}</span> 
-              <input type="checkbox" on:click={sortVehicles(year)} class="checkbox" />
+              <input type="checkbox" on:click={sortVehicles('year', year)} class="checkbox" />
             </label>
           </div>
           {/each}
@@ -149,12 +160,12 @@
           Filter by Fuel Type
         </div>
         <div class="collapse-content"> 
-          {#if uniqyears}
-          {#each uniqyears as year}
+          {#if uniqfuel}
+          {#each uniqfuel as fuel}
           <div class="form-control">
             <label class="label cursor-pointer">
-              <span class="label-text">{year}</span> 
-              <input type="checkbox"  class="checkbox" />
+              <span class="label-text">{fuel}</span> 
+              <input type="checkbox" on:click={sortVehicles('fuel', fuel)} class="checkbox" />
             </label>
           </div>
           {/each}
@@ -167,12 +178,12 @@
           Filter by Colour
         </div>
         <div class="collapse-content"> 
-          {#if uniqyears}
-          {#each uniqyears as year}
+          {#if uniqcolors}
+          {#each uniqcolors as color}
           <div class="form-control">
             <label class="label cursor-pointer">
-              <span class="label-text">{year}</span> 
-              <input type="checkbox" class="checkbox" />
+              <span class="label-text">{color}</span> 
+              <input type="checkbox" on:click={sortVehicles('color', color)} class="checkbox" />
             </label>
           </div>
           {/each}
@@ -190,7 +201,7 @@
           <div class="form-control">
             <label class="label cursor-pointer">
               <span class="label-text">{make}</span> 
-              <input type="checkbox" class="checkbox" />
+              <input type="checkbox" on:click={sortVehicles('make', make)} class="checkbox" />
             </label>
           </div>
           {/each}

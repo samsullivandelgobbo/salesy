@@ -28,6 +28,9 @@ class BaseService {
   async findbyMultiple(field, value) {
     return await this.model.find({[field]: value})
   }
+  async findOne(field, value) {
+    return await this.model.findOne({[field]: value})
+  }
   
 }
 
