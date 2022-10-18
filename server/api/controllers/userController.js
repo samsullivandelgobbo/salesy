@@ -5,9 +5,10 @@ const bcrypt = require('bcryptjs')
 
 exports.addUser = async (req, res) => {
   try {
-    let username = req.body.username
+    let email = req.body.email
     let password = req.body.password
-    const newuser = await userService.addUser(username, password)
+    console.log(req.body)
+    const newuser = await userService.addUser(email, password)
     const token = JsonWebToken.sign({ id: newuser._id }, SECRET)
     console.log(token)
     res.status(200).json({ success: true, token: token })
@@ -18,9 +19,9 @@ exports.addUser = async (req, res) => {
 
 exports.userLogin = async (req, res) => {
 
-    let username = req.body.username
+    let email = req.body.email
     let password = req.body.password
-    const validUser = await userService.validUsername(username)
+    const validUser = await userService.validUsername(email)
     if (!validUser) {
       res.status(500).json({ success: false, error: 'Invalid username'})
     } else {
@@ -40,6 +41,13 @@ exports.userLogin = async (req, res) => {
     }
   } 
 
+exports.createSession = async (req, res) => {
+
+}
+
+exports.verifyToken = async (req, res) => {
+  
+}
 
 
 

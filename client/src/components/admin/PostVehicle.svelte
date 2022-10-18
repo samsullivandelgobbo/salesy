@@ -1,5 +1,7 @@
 <script lang="ts">
   import axios from "axios"
+  import { onMount } from 'svelte'
+
   let formData = new FormData()
   let files
   let stockNum: any
@@ -18,6 +20,11 @@
   let transmission:any
   let description:any
   let notes:any
+  let authToken:any
+
+  onMount(async() => {
+    authToken = sessionStorage.getItem('JWT')
+  })
 
   async function vinPopulate(vin) {
     console.log(vin)
@@ -63,6 +70,7 @@
       method: "post",
       url: "http://localhost:4000/inventory/addvehicle",
       data: formData,
+      headers: authToken
     })
       .then(function (response) {
         console.log(response)

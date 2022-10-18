@@ -1,6 +1,6 @@
 <script lang="ts">
   export let item
-  let title =  item.year + " " + item.make + " " + item.model
+
 </script>
 
 <div class="card card-compact bg-base-100 shadow-xl">
@@ -9,7 +9,7 @@
   </figure>
   <div class="card-body">
     <h2 class="card-title">
-          {title}
+          {item.year + " " + item.make + " " + item.model}
     </h2>
     <div class="flex flex-col lg:flex-row font-medium text-base">
       <div class="basis-1/2">
@@ -34,7 +34,7 @@
       <label for="my-modal-{item.stockNum}" class="modal cursor-pointer">
         <div class="modal-box">
           <h3 class="text-lg font-medium">
-            {title}
+            {item.year + " " + item.make + " " + item.model}
           </h3>
           <figure>
             <div class="carousel w-full">
