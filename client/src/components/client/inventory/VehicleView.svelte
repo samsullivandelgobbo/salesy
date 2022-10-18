@@ -2,8 +2,13 @@
   import { onMount } from "svelte"
   import axios from "axios"
   import VehicleMedia from "./VehicleMedia.svelte"
-  import { Splide, SplideSlide } from "@splidejs/svelte-splide"
+  import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide"
   import "@splidejs/svelte-splide/css"
+
+  let options = {
+    rewind: true,
+    autoplay: true,
+  }
 
   export let id
   let data
@@ -11,12 +16,14 @@
   let i
   let photos
   let title
+  let price
 
   onMount(async () => {
     let data = await axios.get(`http://localhost:4000/inventory/stocknum/${id}`)
     item = data.data[0]
     console.log(item)
     title = item.year + " " + item.make + " " + item.model
+    price = item.price
   })
 
   async function getPhotos() {
@@ -30,8 +37,50 @@
 
   let promise = getPhotos()
 </script>
-<div class="flex p-10 place-content-start ">
-  <h1>{title}</h1>
+
+<div class="flex flex-row p-16">
+  <div class="basis-1/2">
+    {#await promise then photos}
+      <Splide hasTrack={false} {options}>
+        <SplideTrack>
+          {#each photos as photo}
+            <SplideSlide>
+              <img src={photo} alt={title} />
+            </SplideSlide>
+          {/each}
+        </SplideTrack>
+      </Splide>
+    {/await}
+  </div>
+  <div class="basis-1/2 px-4">
+    <div class="flex flex-col">
+      <div class="basis-1/2">
+        <h1 class="text-xl font-bold text-gray-900 md:text-2xl">{title}</h1>
+        <div class="basis-1/3 py-2 pb-6">
+          <div class="flex flex-row">
+            <h1 class="normal-nums text-xl font-md text-gray-900 md:text-2xl">
+              ${price}
+            </h1>
+            <h2 class="normal-nums mx-6">({Math.round(price / 72 / 2)}/biweekly)</h2>
+          </div>
+        </div>
+        <div class="btn btn-rounded">Get Started</div>
+      </div>
+      <div class="py-8">
+        <div class="tabs">
+          <div class="tab tab-bordered">Overview</div> 
+          <div class="tab tab-bordered tab-active">Pricing</div> 
+          <div class="tab tab-bordered">Features</div>
+          <div class="tab tab-bordered">Specifications</div>
+          <div class="tab tab-bordered">Disclosure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="flex p-10 place-content-start ">
+  <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">{title}</h1>
 </div>
 <div class="flex flex-row px-10">
   <div class="basis-1/2">
@@ -57,4 +106,4 @@
   <div class="basis-1/2 p-4">
   
   </div>
-</div>
+</div> -->

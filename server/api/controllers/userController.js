@@ -7,10 +7,8 @@ exports.addUser = async (req, res) => {
   try {
     let email = req.body.email
     let password = req.body.password
-    console.log(req.body)
     const newuser = await userService.addUser(email, password)
     const token = JsonWebToken.sign({ id: newuser._id }, SECRET)
-    console.log(token)
     res.status(200).json({ success: true, token: token })
   } catch (err) {
     res.status(500).json({ success: false, error: err })
@@ -41,17 +39,28 @@ exports.userLogin = async (req, res) => {
     }
   } 
 
-exports.createSession = async (req, res) => {
 
-}
-
-exports.verifyToken = async (req, res) => {
+exports.getUser = async (req, res) => {
   
-}
+    if (req.headers && req.headers.authorization) {
+      let authorization = req.headers.authorization
+      try {
+        let decoded = JsonWebToken.verify(authorization, SECRET)
 
+        try {
+          const findUser = await userService.getUserbyId(decoded.id)
+          res.status(200).send(findUser)
+        } catch (err) {
+          res.status(500).json({ error: err })
+        
+        }
 
+      } catch (err) {
+          res.status(500).json({ success: false, error: 'Authorization failed' })
+      }   
+    } else {
+        res.status(500).json({ success: false, error: 'Authorization not provided' })
+    }
 
-
-
-
+  }
 

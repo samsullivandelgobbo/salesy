@@ -15,6 +15,7 @@
   let uniqprices
   let uniqmakes
   let uniqfuel
+  let uniqmodels
   
   onMount(async () => {
     data = await axios.get('http://localhost:4000/inventory/')
@@ -29,9 +30,7 @@
       years.push(items[i].year)
     }
     for (let i = 0; i < items.length; i++) {
-      console.log('before if')
       if (items[i].specs) {
-        console.log('if')
         fuel.push(items[i].specs.fuel)
       }
       else {
@@ -50,7 +49,7 @@
     uniqyears = [...new Set(years)]
     uniqprices = [...new Set(prices)]
     uniqmakes = [...new Set(makes)]
-    console.log(uniqmakes, uniqprices, uniqfuel, uniqyears, uniqcolors)
+
 
 
 

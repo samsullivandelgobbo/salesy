@@ -3,13 +3,16 @@
 
 </script>
 
-<div class="card card-compact bg-base-100 shadow-xl">
+<div class="card card-compact bg-base-100 shadow-xl hover:shadow-2xl hover:bg-base-200">
   <figure>
+    <a href="/inventory/{item.stockNum}">
     <img src={item.mediaPath + item.stockNum + "0.jpg"} alt="Car" />
+  </a>
   </figure>
   <div class="card-body">
-    <h2 class="card-title">
+    <h2 class="card-title"><a href="/inventory/{item.stockNum}">
           {item.year + " " + item.make + " " + item.model}
+        </a>
     </h2>
     <div class="flex flex-col lg:flex-row font-medium text-base">
       <div class="basis-1/2">
@@ -22,7 +25,7 @@
     <div class="card-actions place-content-end">
       <!-- The button to open modal -->
 
-      <label for="my-modal-{item.stockNum}" class="btn modal-button">view</label
+      <label for="my-modal-{item.stockNum}" class="btn modal-button">Quick View</label
       >
 
       <!-- Put this part before </body> tag -->

@@ -69,8 +69,11 @@
     const doPost = await axios({
       method: "post",
       url: "http://localhost:4000/inventory/addvehicle",
+      headers: {
+        authorization: authToken
+      },
       data: formData,
-      headers: authToken
+  
     })
       .then(function (response) {
         console.log(response)

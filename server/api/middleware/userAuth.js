@@ -7,6 +7,7 @@ exports.Auth = (req, res, next) => {
       let authorization = req.headers.authorization
       try {
         let decoded = JsonWebToken.verify(authorization, SECRET)
+        console.log(decoded)
         next()
       } catch (err) {
           res.status(500).json({ success: false, error: 'Authorization failed' })

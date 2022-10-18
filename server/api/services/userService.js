@@ -16,6 +16,9 @@ class UserService extends BaseService {
   async validPassword(id) {
     return this.loadByField(id)
   }
+  async getUserbyId(id) {
+    return this.findOne('id', id)
+  }
 }
 
 const userService = new UserService(User)

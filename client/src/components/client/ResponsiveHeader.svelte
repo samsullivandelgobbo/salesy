@@ -1,3 +1,31 @@
+<script>
+  import axios from "axios"
+  import { onMount } from "svelte"
+
+  let authToken
+  let loggedIn = false
+
+  onMount(async () => {
+    authToken = sessionStorage.getItem("JWT")
+
+    if (authToken)
+      return await axios({
+        method: "get",
+        url: "http://localhost:4000/user/verify",
+        headers: {
+          authorization: authToken,
+        },
+      })
+        .then(function (response) {
+          console.log(response)
+          if (response.statusText == "OK") return (loggedIn = true)
+        })
+        .catch(function (err, response) {
+          console.log(response, err)
+        })
+  })
+</script>
+
 <div class="navbar bg-primary z-50 font-hyundai">
   <div class="navbar-start">
     <div class="dropdown">
@@ -161,6 +189,16 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <a href="/login" class="btn">Get started</a>
+    {#if loggedIn == true}
+      <a href="/profile">
+        <div
+          class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full hover:bg-gray-300"
+        >
+          <span class="font-medium text-gray-600">SS</span>
+        </div>
+      </a>
+    {:else}
+      <a href="/login" class="btn">Get started</a>
+    {/if}
   </div>
 </div>

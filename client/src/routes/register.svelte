@@ -11,7 +11,7 @@
   let error = false
 
   onMount(async() => {
-    
+
   })
 
   let passwordCheck = function () {
@@ -64,6 +64,7 @@
     <span>Error: login failed!</span>
   </div>
 </div>
+{/if}
 
 
 
