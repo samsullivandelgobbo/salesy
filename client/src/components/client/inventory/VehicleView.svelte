@@ -1,14 +1,24 @@
 <script>
   import { onMount } from "svelte"
   import axios from "axios"
-  import VehicleMedia from "./VehicleMedia.svelte"
+  import VehicleSpecs from "./VehicleMedia.svelte"
   import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide"
   import "@splidejs/svelte-splide/css"
+  import { loggedIn } from '../../../stores'
+  import LoginModal from '../LoginModal.svelte'
+  let loggedin
+
+  loggedIn.subscribe(value => {
+    loggedin = value
+  })
+
 
   let options = {
     rewind: true,
     autoplay: true,
   }
+
+
 
   export let id
   let data
@@ -17,6 +27,7 @@
   let photos
   let title
   let price
+  
 
   onMount(async () => {
     let data = await axios.get(`http://localhost:4000/inventory/stocknum/${id}`)
@@ -38,8 +49,8 @@
   let promise = getPhotos()
 </script>
 
-<div class="flex flex-row p-16">
-  <div class="basis-1/2">
+<div class="flex flex-col lg:flex-row lg:p-16 sm:p-8">
+  <div class="sm:w-full lg:basis-1/2">
     {#await promise then photos}
       <Splide hasTrack={false} {options}>
         <SplideTrack>
@@ -61,23 +72,57 @@
             <h1 class="normal-nums text-xl font-md text-gray-900 md:text-2xl">
               ${price}
             </h1>
-            <h2 class="normal-nums mx-6">({Math.round(price / 72 / 2)}/biweekly)</h2>
+            <h2 class="normal-nums mx-6">
+              ({Math.round(price / 72 / 2)}/biweekly)
+            </h2>
           </div>
         </div>
         <div class="btn btn-rounded">Get Started</div>
+        <LoginModal/>
       </div>
-      <div class="py-8">
-        <div class="tabs">
-          <div class="tab tab-bordered">Overview</div> 
-          <div class="tab tab-bordered tab-active">Pricing</div> 
-          <div class="tab tab-bordered">Features</div>
-          <div class="tab tab-bordered">Specifications</div>
-          <div class="tab tab-bordered">Disclosure</div>
+      <div class="py-4">
+      <h1 class="text-md font-medium">Vehicle Details</h1>
+        <div class="grid grid-cols-2 gap-4 p-4">
+          <div class="flex w-8">
+            <img src="https://shop.canadadrives.ca/_nuxt/img/odometer.f95737f.svg"/>
+            <h1 class="px-2 text:medium">Kilometers</h1>
+          </div>
+          <div class="flex w-8">
+            <img src="https://shop.canadadrives.ca/_nuxt/img/engine.d95f87e.svg"/>
+            <h1 class="px-2 text:medium">Engine</h1>
+          </div>
+          <div class="flex w-8">
+            <img src="https://shop.canadadrives.ca/_nuxt/img/transmission.5674de1.svg"/>
+            <h1 class="px-2 text:medium">Transmission</h1>
+          </div>
+          <div class="flex w-8">
+            <img src="https://shop.canadadrives.ca/_nuxt/img/gas-pump.4609674.svg"/>
+            <h1 class="px-2 text:medium">Fuel Economy</h1>
+          </div>
+          <div class="flex w-8">
+            <img src="https://shop.canadadrives.ca/_nuxt/img/drivetrain.157daec.svg"/>
+            <div class="flex-cols-2">
+            <h1 class="px-2 text:medium">Drivetrain</h1>
+            <div class="px-4"> coco</div>
+
+          </div>
+          </div>
+
         </div>
-      </div>
+    <div class="">
+      Features
+    </div>
+
+    </div>
     </div>
   </div>
+  <div>
+    <h1>Price Details</h1>
+
+  </div>
 </div>
+
+
 
 <!-- <div class="flex p-10 place-content-start ">
   <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">{title}</h1>
@@ -106,4 +151,18 @@
   <div class="basis-1/2 p-4">
   
   </div>
+</div> -->
+
+<!-- 
+<div class="py-8">
+  <div class="tabs">
+    <button class="tab tab-bordered" on:click={overview}>Tab 1<button> 
+    <button class="tab tab-bordered">Tab 2<button> 
+    <button class="tab tab-bordered">Tab 3<button> 
+    <button class="tab tab-bordered">Tab 3<button> 
+    <button class="tab tab-bordered">Tab 3<button> 
+  </div>
+{#if overview}
+<div class="flex">COCO is big</div>
+{/if}
 </div> -->

@@ -1,5 +1,9 @@
 const JsonWebToken = require('jsonwebtoken')
-const SECRET = '84758327457'
+const dotenv = require('dotenv')
+
+dotenv.config()
+SECRET = process.env.TOKEN_SECRET
+
 
 
 exports.Auth = (req, res, next) => {

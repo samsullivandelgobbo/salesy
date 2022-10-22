@@ -1,14 +1,41 @@
 <script>
   import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide"
   import "@splidejs/svelte-splide/css"
+  import { loggedIn } from "../stores"
+  import { onMount } from "svelte"
+  import axios from "axios"
+  import VehicleCard from '../components/client/inventory/VehicleCard.svelte'
+
+
+  let loggedin 
+
+  loggedIn.subscribe(value => {
+    loggedin = value
+  })
+
   const options = {
     rewind: true,
     autoplay: true,
+    perPage: 4,
+    breakpoints: {
+      640: {
+        perPage: 1
+      }
+    },
+    width: '100%'
   }
+  let items
+  async function getRandom() {
+    const res = await axios.get("http://localhost:4000/inventory")
+    items = res.data
+    return items
+  }
+  let promise = getRandom()
+
 </script>
 
 <div class="flex flex-col space-y-6">
-  <Splide {options} hasTrack={false}>
+  <Splide hasTrack={false}>
     <SplideTrack>
       <SplideSlide class="w-full">
         <img
@@ -42,49 +69,7 @@
   </Splide>
 
 
- <!-- <Splide>
-  <SplideTrack>
-    <SplideSlide class="w-full">
-      <video autoplay loop muted>
-        <track kind="captions"/>
-        <source 
-        src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4"
-        type="video/mp4"
-        
-      />
-      
-    </video>
-    </SplideSlide>
-    <SplideSlide class="w-full">
-      <video autoplay loop muted>
-        <track kind="captions"/>
-        <source 
-        src="https://mdbcdn.b-cdn.net/img/video/forest.mp4"
-        type="video/mp4"
-        autoplay
-      />
-      
-    </video>
-    </SplideSlide>
-    <SplideSlide class="w-full">
-      <video autoplay loop muted>
-        <track kind="captions"/>
-        <source 
-        src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4"
-        type="video/mp4"
-        autoplay
-      />
-      
-    </video>
-    </SplideSlide>
-
-  </SplideTrack>
-</Splide> -->
-
-
-
-
-  <div class="flex flex-col w-full lg:flex-row sm:px-8 justify-center gap-20">
+  <div class="flex flex-col w-full lg:flex-row sm:px-8 justify-center lg:gap-20">
     <div class="card card-side bg-base-100">
       <figure>
         <img
@@ -94,10 +79,10 @@
         />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">Shop vehicles</h2>
+        <h2 class="card-title sm:justify">Shop vehicles</h2>
         <p>Get approved at home and pickup next day</p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary"
+          <button class="btn btn-primary sm:w-24 lg:w-full"
             ><a href="/inventory">View Inventory</a></button
           >
         </div>
@@ -115,7 +100,7 @@
         <h2 class="card-title">Build & Price</h2>
         <p>Customize your next Hyundai at home</p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary"
+          <button class="btn btn-primary sm:w-24 lg:w-full"
             ><a href="/inventory/new">View Models</a></button
           >
         </div>
@@ -154,6 +139,24 @@
       </div>
     </div>
   </div>
+  <h1 class="text-xl font-bold px-10">Inventory</h1>
+  <div class="flex p-4">
+    {#await promise then items}
+    <Splide {options} hasTrack={false}>
+        <SplideTrack>
+          {#each items as item}
+            <SplideSlide>
+              <div class="px-4 flex mb-4">
+              <VehicleCard {item} />
+            </div>
+            </SplideSlide>
+          {/each}
+        </SplideTrack>
+    </Splide>
+    {/await}
+  </div>
+
+
   <div class="flex px-10">
     <div class="hero bg-secondary-200">
       <div class="hero-content flex-col lg:flex-row">
@@ -163,8 +166,10 @@
         />
         <div>
           <h1 class="text-5xl font-bold">View vehicle value</h1>
-          <p class="p-6 justify-center">Get your vehicles trade-in value in minutes</p>
-          
+          <p class="p-6 justify-center">
+            Get your vehicles trade-in value in minutes
+          </p>
+
           <div class="flex p-20 place-content-center">
             <ul class="steps steps-vertical lg:steps-horizontal">
               <li class="step step-primary">Enter vehicle details</li>
@@ -176,15 +181,105 @@
       </div>
     </div>
   </div>
-  <div tabindex="0" class="collapse justify-center px-2"> 
-    <div class="bg-primary rounded-box collapse-title text-xl font-medium text-center">
-      Get Started
-    </div>
-    <div class="collapse-content"> 
-      <form>
 
-      </form>
-      <p>tabindex="0" attribute is necessary to make the div focusable</p>
+
+
+  <!-- The button to open modal -->
+  <div class="flex justify-center w-full p-10">
+<label for="my-modal-6" class="btn modal-button w-1/2">Get Started</label>
+</div>
+<!-- Put this part before </body> tag -->
+{#if loggedin}
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <section class="bg-white">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">Contact Us</h2>
+          <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+          <form action="#" class="space-y-8">
+              <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                  <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="name@flowbite.com" required>
+              </div>
+              <div>
+                  <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                  <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Let us know how we can help you" required>
+              </div>
+              <div class="sm:col-span-2">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                  <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+              </div>
+              <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
+          </form>
+      </div>
+    </section>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn">Yay!</label>
     </div>
   </div>
 </div>
+
+{:else}
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <section class="bg-white">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">Log in</h2>
+          <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Log in or Sign up to continue</p>
+
+
+
+
+      </div>
+    </section>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn">Yay!</label>
+    </div>
+  </div>
+</div>
+{/if}
+
+  
+</div>
+
+
+  <!-- <Splide>
+  <SplideTrack>
+    <SplideSlide class="w-full">
+      <video autoplay loop muted>
+        <track kind="captions"/>
+        <source 
+        src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4"
+        type="video/mp4"
+        
+      />
+      
+    </video>
+    </SplideSlide>
+    <SplideSlide class="w-full">
+      <video autoplay loop muted>
+        <track kind="captions"/>
+        <source 
+        src="https://mdbcdn.b-cdn.net/img/video/forest.mp4"
+        type="video/mp4"
+        autoplay
+      />
+      
+    </video>
+    </SplideSlide>
+    <SplideSlide class="w-full">
+      <video autoplay loop muted>
+        <track kind="captions"/>
+        <source 
+        src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4"
+        type="video/mp4"
+        autoplay
+      />
+      
+    </video>
+    </SplideSlide>
+
+  </SplideTrack>
+</Splide> -->

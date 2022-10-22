@@ -9,6 +9,7 @@ const app = express();
 const inventoryRoutes = require('./api/routes/inventoryRoutes')
 const userRoutes = require('./api/routes/userRoutes')
 
+
 mongoose
   .connect(config.database, { useNewUrlParser: true })
   .then(() => {
@@ -25,11 +26,6 @@ app.use(cors());
 app.use(bodyParser.json());
 //configure body-parser ends here
 app.use(morgan("dev")); // configire morgan
-
-app.use(function(err, req, res, next) {
-  console.log(err);
-  next(err);
-})
 
 app.use('/user', userRoutes)
 

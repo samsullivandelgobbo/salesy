@@ -1,7 +1,10 @@
 const userService = require('../services/userService')
 const JsonWebToken = require('jsonwebtoken')
-const SECRET = '84758327457'
+const dotenv = require('dotenv')
 const bcrypt = require('bcryptjs')
+
+dotenv.config()
+SECRET = process.env.TOKEN_SECRET
 
 exports.addUser = async (req, res) => {
   try {

@@ -1,12 +1,16 @@
 <script>
   import axios from "axios"
   import { onMount } from "svelte"
+  import { loggedIn } from '../../stores'
 
   let authToken
-  let loggedIn = false
+  let loggedin
 
+  loggedIn.subscribe(value => {
+    loggedin = value
+  })
   onMount(async () => {
-    authToken = sessionStorage.getItem("JWT")
+    authToken = localStorage.getItem("JWT")
 
     if (authToken)
       return await axios({
@@ -17,11 +21,11 @@
         },
       })
         .then(function (response) {
-          console.log(response)
-          if (response.statusText == "OK") return (loggedIn = true)
+          
+          if (response.statusText == "OK") return (loggedIn.set(true))
         })
         .catch(function (err, response) {
-          console.log(response, err)
+          console.log(err)
         })
   })
 </script>
@@ -82,8 +86,10 @@
             >
           </a>
           <ul class="p-2 bg-primary">
-            <li><a href="/service/book">Schedule Appointment</a></li>
+            <li><a href="/service/schedule">Schedule Appointment</a></li>
             <li><a href="about/contact">Message us</a></li>
+            <li><a href="/parts">Parts Department</a></li>
+            <li><a href="/tires">Tire Shop</a></li>
           </ul>
         </li>
         <li><a href="/finance">Financing</a></li>
@@ -104,6 +110,7 @@
           <ul class="p-2 bg-primary">
             <li><a href="/about/contact">Contact us</a></li>
             <li><a href="/about/faq">FAQs</a></li>
+            <li><a href="/sustaiability">Sustainability</a></li>
           </ul>
         </li>
       </ul>
@@ -162,8 +169,10 @@
           >
         </a>
         <ul class="p-2 bg-primary z-50">
-          <li><a href="/service/book">Schedule Appointment</a></li>
+          <li><a href="/service/schedule">Schedule Appointment</a></li>
           <li><a href="/about/contact">Message us</a></li>
+          <li><a href="/parts">Parts Department</a></li>
+          <li><a href="/tires">Tire Store</a></li>
         </ul>
       </li>
       <li><a href="/finance">Financing</a></li>
@@ -184,19 +193,27 @@
         <ul class="p-2 bg-primary z-50">
           <li><a href="/about/contact">Contact us</a></li>
           <li><a href="/about/faq">FAQs</a></li>
+          <li><a href="/sustainability">Sustainability</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <div class="navbar-end">
-    {#if loggedIn == true}
-      <a href="/profile">
-        <div
-          class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full hover:bg-gray-300"
-        >
-          <span class="font-medium text-gray-600">SS</span>
+    {#if loggedin == true}
+        <div class="dropdown dropdown-end p-0">
+
+          <label tabindex="0" class="btn">
+            <div
+            class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full hover:bg-gray-300"
+          >
+            <span class="font-medium text-gray-600">SS</span>
+          </label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/profile/favorites">Favorites</a></li>
+          </ul>
         </div>
-      </a>
+        
     {:else}
       <a href="/login" class="btn">Get started</a>
     {/if}

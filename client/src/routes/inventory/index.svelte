@@ -128,7 +128,7 @@
 
     <VehicleList items={items} data={data} />
   </div>
-  <div class="drawer-side">
+  <div class="drawer-side lg:sticky">
     <label for="my-drawer-3" class="drawer-overlay" />
     <ul class="menu p-4 overflow-y-auto w-60 bg-base-100">
       <!-- Sidebar content here -->

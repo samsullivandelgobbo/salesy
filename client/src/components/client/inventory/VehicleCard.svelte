@@ -1,13 +1,34 @@
 <script lang="ts">
-  export let item
+  import { loggedIn } from '../../../stores'
+  import LoginModal from '../LoginModal.svelte'
+  let loggedin
+
+  loggedIn.subscribe(value => {
+    loggedin = value
+  })
+
+  export let item 
 
 </script>
 
-<div class="card card-compact bg-base-100 shadow-xl hover:shadow-2xl hover:bg-base-200">
+<div class="card card-compact bg-base-100 hover:bg-base-200">
   <figure>
     <a href="/inventory/{item.stockNum}">
-    <img src={item.mediaPath + item.stockNum + "0.jpg"} alt="Car" />
+    <img src={item.mediaPath + item.stockNum + "0.jpg"} alt="Car">
   </a>
+
+  {#if loggedin}
+    <div class="absolute right-4 top-4 hover:scale-125" >
+      <button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart hover:stroke-red-500 focus:hidden"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+    </div>
+{:else}
+<div class="absolute right-4 top-4 hover:scale-125" >
+  <LoginModal/>
+</div>
+{/if}
+  
   </figure>
   <div class="card-body">
     <h2 class="card-title"><a href="/inventory/{item.stockNum}">
@@ -25,7 +46,7 @@
     <div class="card-actions place-content-end">
       <!-- The button to open modal -->
 
-      <label for="my-modal-{item.stockNum}" class="btn modal-button">Quick View</label
+      <label for="my-modal-{item.stockNum}" class="btn glass modal-button">Quick View</label
       >
 
       <!-- Put this part before </body> tag -->
