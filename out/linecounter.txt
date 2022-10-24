@@ -1,0 +1,265 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2022-10-24 14:57:01
+count workspace : /Users/ss/Dev/Projects/salesy
+total files : 237
+total code lines : 14251
+total comment lines : 1022
+total blank lines : 1278
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |            .js|           4424|            952|            961|     31|
+   |               |             17|              1|              2|   0.12|
+   |        .svelte|           2956|             29|            214|     21|
+   |           .css|             21|              0|              0|   0.15|
+   |          .json|           6480|              0|             46|     45|
+   |            .md|              0|              0|              0|    0.0|
+   |          .html|             12|              0|              1|  0.084|
+   |            .ts|            125|             35|             26|   0.88|
+   |           .svg|            150|              2|              4|    1.1|
+   |           .cjs|             43|              1|              9|   0.30|
+   |            .py|             23|              2|             15|   0.16|
+   |           .txt|              0|              0|              0|    0.0|
+   -------------------------------------------------------------------------
+.gitignore, code is 2, comment is 0, blank is 0.
+admin/admin.py, code is 10, comment is 2, blank is 12.
+admin/coco.py, code is 5, comment is 0, blank is 0.
+admin/test.png, it is a binary file.
+admin/test.py, code is 8, comment is 0, blank is 3.
+client/.gitignore, code is 8, comment is 0, blank is 1.
+client/.npmrc, code is 1, comment is 0, blank is 0.
+client/.svelte-kit/generated/client-manifest.js, code is 54, comment is 0, blank is 2.
+client/.svelte-kit/generated/client-matchers.js, code is 1, comment is 0, blank is 0.
+client/.svelte-kit/generated/root.svelte, code is 53, comment is 1, blank is 9.
+client/.svelte-kit/runtime/app/env.js, code is 4, comment is 6, blank is 3.
+client/.svelte-kit/runtime/app/navigation.js, code is 17, comment is 3, blank is 4.
+client/.svelte-kit/runtime/app/paths.js, code is 1, comment is 0, blank is 0.
+client/.svelte-kit/runtime/app/stores.js, code is 72, comment is 12, blank is 13.
+client/.svelte-kit/runtime/client/singletons.js, code is 5, comment is 6, blank is 2.
+client/.svelte-kit/runtime/client/start.js, code is 1246, comment is 294, blank is 304.
+client/.svelte-kit/runtime/components/error.svelte, code is 21, comment is 3, blank is 5.
+client/.svelte-kit/runtime/components/layout.svelte, code is 1, comment is 0, blank is 0.
+client/.svelte-kit/runtime/env.js, code is 5, comment is 1, blank is 2.
+client/.svelte-kit/runtime/paths.js, code is 7, comment is 3, blank is 3.
+client/.svelte-kit/runtime/server/index.js, code is 2418, comment is 618, blank is 557.
+client/.svelte-kit/tsconfig.json, code is 25, comment is 0, blank is 4.
+client/.svelte-kit/types/src/routes/__types/__layout.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/__types/login.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/__types/register.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/about/__types/contact.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/about/__types/faq.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/about/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/admin/__types/__layout.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/admin/__types/add-vehicle.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/admin/__types/admin.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/admin/__types/edit-vehicle.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/admin/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/admin/__types/login.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/finance/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/inventory/__types/[id].d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/inventory/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/inventory/__types/new.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/inventory/__types/used.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/parts/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/profile/__types/favorites.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/profile/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/service/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/service/__types/schedule.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/sustainability/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/.svelte-kit/types/src/routes/tires/__types/index.d.ts, code is 5, comment is 1, blank is 1.
+client/jsconfig.json, code is 13, comment is 0, blank is 0.
+client/package-lock.json, code is 4048, comment is 0, blank is 41.
+client/package.json, code is 34, comment is 0, blank is 0.
+client/postcss.config.cjs, code is 6, comment is 0, blank is 0.
+client/README.md, code is 0, comment is 0, blank is 0.
+client/src/app.css, code is 12, comment is 0, blank is 0.
+client/src/app.d.ts, code is 0, comment is 10, blank is 1.
+client/src/app.html, code is 12, comment is 0, blank is 1.
+client/src/components/admin/PostVehicle.svelte, code is 191, comment is 2, blank is 8.
+client/src/components/client/ContactModal.svelte, code is 34, comment is 0, blank is 2.
+client/src/components/client/Finance.svelte, code is 0, comment is 0, blank is 0.
+client/src/components/client/inventory/InventoryCarousel.svelte, code is 42, comment is 0, blank is 7.
+client/src/components/client/inventory/InventoryList.svelte, code is 15, comment is 0, blank is 1.
+client/src/components/client/inventory/VehicleCard.svelte, code is 239, comment is 2, blank is 18.
+client/src/components/client/inventory/VehicleMedia.svelte, code is 15, comment is 1, blank is 2.
+client/src/components/client/inventory/VehicleSpecs.svelte, code is 31, comment is 0, blank is 10.
+client/src/components/client/inventory/VehicleView.svelte, code is 288, comment is 2, blank is 12.
+client/src/components/client/layout/Banner.svelte, code is 0, comment is 0, blank is 0.
+client/src/components/client/layout/BottomNavbar.svelte, code is 50, comment is 0, blank is 5.
+client/src/components/client/layout/Footer.svelte, code is 37, comment is 0, blank is 1.
+client/src/components/client/Login.svelte, code is 75, comment is 0, blank is 6.
+client/src/components/client/LoginModal.svelte, code is 171, comment is 4, blank is 16.
+client/src/components/client/LoginModal1.svelte, code is 106, comment is 3, blank is 5.
+client/src/components/client/Logout.svelte, code is 10, comment is 0, blank is 1.
+client/src/components/client/Modal.svelte, code is 100, comment is 10, blank is 19.
+client/src/components/client/profile/FavoriteView.svelte, code is 0, comment is 0, blank is 0.
+client/src/components/client/ResponsiveHeader.svelte, code is 226, comment is 0, blank is 5.
+client/src/components/client/tire/TireCard.svelte, code is 26, comment is 0, blank is 0.
+client/src/components/Messages.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/__layout.svelte, code is 13, comment is 0, blank is 4.
+client/src/routes/about/contact.svelte, code is 21, comment is 0, blank is 0.
+client/src/routes/about/faq.svelte, code is 99, comment is 0, blank is 0.
+client/src/routes/about/index.svelte, code is 36, comment is 0, blank is 0.
+client/src/routes/admin/__layout.svelte, code is 33, comment is 0, blank is 5.
+client/src/routes/admin/add-vehicle.svelte, code is 4, comment is 0, blank is 1.
+client/src/routes/admin/admin.svelte, code is 61, comment is 0, blank is 8.
+client/src/routes/admin/edit-vehicle.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/admin/index.svelte, code is 42, comment is 0, blank is 4.
+client/src/routes/admin/login.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/finance/index.svelte, code is 40, comment is 0, blank is 1.
+client/src/routes/index.svelte, code is 119, comment is 0, blank is 6.
+client/src/routes/inventory/[id].svelte, code is 10, comment is 0, blank is 12.
+client/src/routes/inventory/index.svelte, code is 195, comment is 1, blank is 19.
+client/src/routes/inventory/new.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/inventory/used.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/login.svelte, code is 148, comment is 0, blank is 4.
+client/src/routes/parts/index.svelte, code is 113, comment is 0, blank is 2.
+client/src/routes/profile/favorites.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/profile/index.svelte, code is 98, comment is 0, blank is 3.
+client/src/routes/register.svelte, code is 141, comment is 0, blank is 11.
+client/src/routes/service/index.svelte, code is 5, comment is 0, blank is 1.
+client/src/routes/service/schedule.svelte, code is 0, comment is 0, blank is 0.
+client/src/routes/sustainability/index.svelte, code is 33, comment is 0, blank is 0.
+client/src/routes/tires/index.svelte, code is 14, comment is 0, blank is 1.
+client/src/stores.js, code is 6, comment is 0, blank is 1.
+client/static/1665101966353.png, it is a binary file.
+client/static/blob-haikei.svg, code is 1, comment is 0, blank is 0.
+client/static/car-svgrepo-com.svg, code is 39, comment is 0, blank is 1.
+client/static/cdnlogo.com_.svg, code is 6, comment is 0, blank is 1.
+client/static/cool-background (1).png, it is a binary file.
+client/static/cool-background (2).png, it is a binary file.
+client/static/cool-background.png, it is a binary file.
+client/static/cool-background.svg, code is 3, comment is 0, blank is 0.
+client/static/CreativeWorks-HyundaiSansHead.zip, it is a binary file.
+client/static/favicon.png, it is a binary file.
+client/static/fonts/hyundai/HyundaiSansHeadOffice-Medium.ttf, it is a binary file.
+client/static/fonts/hyundai/HyundaiSansHeadOffice-Medium.woff, it is a binary file.
+client/static/fonts/hyundai/HyundaiSansHeadOffice-Medium.woff2, it is a binary file.
+client/static/fonts/hyundai/style.css, code is 9, comment is 0, blank is 0.
+client/static/heart.svg, code is 1, comment is 0, blank is 0.
+client/static/Hyundai-logo-final.svg, code is 47, comment is 1, blank is 1.
+client/static/Hyundai-logo.svg, code is 51, comment is 1, blank is 1.
+client/static/hyundai-svgrepo-com.svg, code is 1, comment is 0, blank is 0.
+client/static/HyundaiSansHeadOffice-Bold.zip, it is a binary file.
+client/static/HyundaiSansHeadOffice-Medium.zip, it is a binary file.
+client/static/waves.svg, code is 1, comment is 0, blank is 0.
+client/svelte.config.js, code is 16, comment is 1, blank is 2.
+client/tailwind.config.cjs, code is 37, comment is 1, blank is 9.
+client/vite.config.js, code is 5, comment is 1, blank is 2.
+server/.env, code is 2, comment is 1, blank is 1.
+server/.gitignore, code is 4, comment is 0, blank is 0.
+server/api/controllers/inventoryController.js, code is 145, comment is 0, blank is 7.
+server/api/controllers/userController.js, code is 64, comment is 0, blank is 16.
+server/api/middleware/multer.js, code is 29, comment is 0, blank is 2.
+server/api/middleware/passport.js, code is 0, comment is 0, blank is 0.
+server/api/middleware/userAuth.js, code is 18, comment is 0, blank is 6.
+server/api/models/customerModel.js, code is 0, comment is 0, blank is 0.
+server/api/models/employeeModel.js, code is 0, comment is 0, blank is 0.
+server/api/models/messageModel.js, code is 23, comment is 0, blank is 1.
+server/api/models/serviceModel.js, code is 0, comment is 0, blank is 0.
+server/api/models/userModel.js, code is 41, comment is 0, blank is 2.
+server/api/models/vehicleModel.js, code is 76, comment is 0, blank is 2.
+server/api/routes/inventoryRoutes.js, code is 22, comment is 1, blank is 6.
+server/api/routes/userRoutes.js, code is 9, comment is 0, blank is 5.
+server/api/services/baseService.js, code is 33, comment is 0, blank is 7.
+server/api/services/inventoryService.js, code is 48, comment is 0, blank is 4.
+server/api/services/userService.js, code is 29, comment is 0, blank is 2.
+server/config/connection.js, code is 3, comment is 0, blank is 0.
+server/config/secrets.txt, code is 0, comment is 0, blank is 0.
+server/package-lock.json, code is 2330, comment is 0, blank is 1.
+server/package.json, code is 30, comment is 0, blank is 0.
+server/README.md, code is 0, comment is 0, blank is 0.
+server/server.js, code is 27, comment is 6, blank is 6.
+server/TODO.md, code is 0, comment is 0, blank is 0.
+server/uploads/A10000/A100000.jpg, it is a binary file.
+server/uploads/A10000/A100001.jpg, it is a binary file.
+server/uploads/A10000/A100002.jpg, it is a binary file.
+server/uploads/A10000/A100003.jpg, it is a binary file.
+server/uploads/A10000/A100004.jpg, it is a binary file.
+server/uploads/A10000/A100005.jpg, it is a binary file.
+server/uploads/A10001/A100010.jpg, it is a binary file.
+server/uploads/A10001/A100011.jpg, it is a binary file.
+server/uploads/A10001/A100012.jpg, it is a binary file.
+server/uploads/A10001/A100013.jpg, it is a binary file.
+server/uploads/A10001/A100014.jpg, it is a binary file.
+server/uploads/A10001/A100015.jpg, it is a binary file.
+server/uploads/A10002/A100020.jpg, it is a binary file.
+server/uploads/A10002/A100021.jpg, it is a binary file.
+server/uploads/A10002/A100022.jpg, it is a binary file.
+server/uploads/A10002/A100023.jpg, it is a binary file.
+server/uploads/A10003/A100030.jpg, it is a binary file.
+server/uploads/A10003/A100031.jpg, it is a binary file.
+server/uploads/A10003/A100032.jpg, it is a binary file.
+server/uploads/A10003/A100033.jpg, it is a binary file.
+server/uploads/A10003/A100034.jpg, it is a binary file.
+server/uploads/A10003/A100035.jpg, it is a binary file.
+server/uploads/A10004/A100040.jpg, it is a binary file.
+server/uploads/A10004/A100041.jpg, it is a binary file.
+server/uploads/A10004/A100042.jpg, it is a binary file.
+server/uploads/A10004/A100043.jpg, it is a binary file.
+server/uploads/A10004/A100044.jpg, it is a binary file.
+server/uploads/A10004/A100045.jpg, it is a binary file.
+server/uploads/A10006/A100060.jpg, it is a binary file.
+server/uploads/A10006/A100061.jpg, it is a binary file.
+server/uploads/A10006/A100062.jpg, it is a binary file.
+server/uploads/A10006/A100063.jpg, it is a binary file.
+server/uploads/A10006/A100064.jpg, it is a binary file.
+server/uploads/A10008/A100080.jpg, it is a binary file.
+server/uploads/A10008/A100081.jpg, it is a binary file.
+server/uploads/A10008/A1000810.jpg, it is a binary file.
+server/uploads/A10008/A1000811.jpg, it is a binary file.
+server/uploads/A10008/A1000812.jpg, it is a binary file.
+server/uploads/A10008/A1000813.jpg, it is a binary file.
+server/uploads/A10008/A1000814.jpg, it is a binary file.
+server/uploads/A10008/A1000815.jpg, it is a binary file.
+server/uploads/A10008/A1000816.jpg, it is a binary file.
+server/uploads/A10008/A1000817.jpg, it is a binary file.
+server/uploads/A10008/A1000818.jpg, it is a binary file.
+server/uploads/A10008/A1000819.jpg, it is a binary file.
+server/uploads/A10008/A100082.jpg, it is a binary file.
+server/uploads/A10008/A1000820.jpg, it is a binary file.
+server/uploads/A10008/A1000821.jpg, it is a binary file.
+server/uploads/A10008/A1000822.jpg, it is a binary file.
+server/uploads/A10008/A1000823.jpg, it is a binary file.
+server/uploads/A10008/A1000824.jpg, it is a binary file.
+server/uploads/A10008/A1000825.jpg, it is a binary file.
+server/uploads/A10008/A1000826.jpg, it is a binary file.
+server/uploads/A10008/A1000827.jpg, it is a binary file.
+server/uploads/A10008/A1000828.jpg, it is a binary file.
+server/uploads/A10008/A1000829.jpg, it is a binary file.
+server/uploads/A10008/A100083.jpg, it is a binary file.
+server/uploads/A10008/A1000830.jpg, it is a binary file.
+server/uploads/A10008/A1000831.jpg, it is a binary file.
+server/uploads/A10008/A1000832.jpg, it is a binary file.
+server/uploads/A10008/A1000833.jpg, it is a binary file.
+server/uploads/A10008/A1000834.jpg, it is a binary file.
+server/uploads/A10008/A1000835.jpg, it is a binary file.
+server/uploads/A10008/A1000836.jpg, it is a binary file.
+server/uploads/A10008/A1000837.jpg, it is a binary file.
+server/uploads/A10008/A1000838.jpg, it is a binary file.
+server/uploads/A10008/A1000839.jpg, it is a binary file.
+server/uploads/A10008/A100084.jpg, it is a binary file.
+server/uploads/A10008/A1000840.jpg, it is a binary file.
+server/uploads/A10008/A1000841.jpg, it is a binary file.
+server/uploads/A10008/A1000842.jpg, it is a binary file.
+server/uploads/A10008/A1000843.jpg, it is a binary file.
+server/uploads/A10008/A1000844.jpg, it is a binary file.
+server/uploads/A10008/A1000845.jpg, it is a binary file.
+server/uploads/A10008/A1000846.jpg, it is a binary file.
+server/uploads/A10008/A1000847.jpg, it is a binary file.
+server/uploads/A10008/A1000848.jpg, it is a binary file.
+server/uploads/A10008/A100085.jpg, it is a binary file.
+server/uploads/A10008/A100086.jpg, it is a binary file.
+server/uploads/A10008/A100087.jpg, it is a binary file.
+server/uploads/A10008/A100088.jpg, it is a binary file.
+server/uploads/A10008/A100089.jpg, it is a binary file.
+server/uploads/A10009/A100090.jpg, it is a binary file.
+server/uploads/A10009/A100091.jpg, it is a binary file.
+server/uploads/A10009/A100092.jpg, it is a binary file.
+server/uploads/A10009/A100093.jpg, it is a binary file.
+===============================================================================

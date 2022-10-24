@@ -1,0 +1,1599 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/Users/ss/Dev/Projects/salesy",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2022-10-24 14:57:01",
+            "filesum": 237,
+            "codesum": 14251,
+            "commentsum": 1022,
+            "blanksum": 1278,
+            "statistics": {
+                ".js": {
+                    "code": 4424,
+                    "comment": 952,
+                    "blank": 961
+                },
+                "": {
+                    "code": 17,
+                    "comment": 1,
+                    "blank": 2
+                },
+                ".svelte": {
+                    "code": 2956,
+                    "comment": 29,
+                    "blank": 214
+                },
+                ".css": {
+                    "code": 21,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".json": {
+                    "code": 6480,
+                    "comment": 0,
+                    "blank": 46
+                },
+                ".md": {
+                    "code": 0,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".html": {
+                    "code": 12,
+                    "comment": 0,
+                    "blank": 1
+                },
+                ".ts": {
+                    "code": 125,
+                    "comment": 35,
+                    "blank": 26
+                },
+                ".svg": {
+                    "code": 150,
+                    "comment": 2,
+                    "blank": 4
+                },
+                ".cjs": {
+                    "code": 43,
+                    "comment": 1,
+                    "blank": 9
+                },
+                ".py": {
+                    "code": 23,
+                    "comment": 2,
+                    "blank": 15
+                },
+                ".txt": {
+                    "code": 0,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 12,
+                    "code": 10,
+                    "comment": 2,
+                    "filename": "admin/admin.py"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "admin/coco.py"
+                },
+                {
+                    "filename": "admin/test.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "admin/test.py"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "client/.gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/.npmrc"
+                },
+                {
+                    "blank": 2,
+                    "code": 54,
+                    "comment": 0,
+                    "filename": "client/.svelte-kit/generated/client-manifest.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/.svelte-kit/generated/client-matchers.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 53,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/generated/root.svelte"
+                },
+                {
+                    "blank": 3,
+                    "code": 4,
+                    "comment": 6,
+                    "filename": "client/.svelte-kit/runtime/app/env.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 3,
+                    "filename": "client/.svelte-kit/runtime/app/navigation.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/.svelte-kit/runtime/app/paths.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 72,
+                    "comment": 12,
+                    "filename": "client/.svelte-kit/runtime/app/stores.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 6,
+                    "filename": "client/.svelte-kit/runtime/client/singletons.js"
+                },
+                {
+                    "blank": 304,
+                    "code": 1246,
+                    "comment": 294,
+                    "filename": "client/.svelte-kit/runtime/client/start.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 21,
+                    "comment": 3,
+                    "filename": "client/.svelte-kit/runtime/components/error.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/.svelte-kit/runtime/components/layout.svelte"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/runtime/env.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 7,
+                    "comment": 3,
+                    "filename": "client/.svelte-kit/runtime/paths.js"
+                },
+                {
+                    "blank": 557,
+                    "code": 2418,
+                    "comment": 618,
+                    "filename": "client/.svelte-kit/runtime/server/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "client/.svelte-kit/tsconfig.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/__types/__layout.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/__types/login.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/__types/register.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/about/__types/contact.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/about/__types/faq.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/about/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/admin/__types/__layout.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/admin/__types/add-vehicle.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/admin/__types/admin.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/admin/__types/edit-vehicle.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/admin/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/admin/__types/login.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/finance/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/inventory/__types/[id].d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/inventory/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/inventory/__types/new.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/inventory/__types/used.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/parts/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/profile/__types/favorites.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/profile/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/service/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/service/__types/schedule.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/sustainability/__types/index.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/.svelte-kit/types/src/routes/tires/__types/index.d.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client/jsconfig.json"
+                },
+                {
+                    "blank": 41,
+                    "code": 4048,
+                    "comment": 0,
+                    "filename": "client/package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "client/package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "client/postcss.config.cjs"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/README.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "client/src/app.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 10,
+                    "filename": "client/src/app.d.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "client/src/app.html"
+                },
+                {
+                    "blank": 8,
+                    "code": 191,
+                    "comment": 2,
+                    "filename": "client/src/components/admin/PostVehicle.svelte"
+                },
+                {
+                    "blank": 2,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "client/src/components/client/ContactModal.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/components/client/Finance.svelte"
+                },
+                {
+                    "blank": 7,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "client/src/components/client/inventory/InventoryCarousel.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "client/src/components/client/inventory/InventoryList.svelte"
+                },
+                {
+                    "blank": 18,
+                    "code": 239,
+                    "comment": 2,
+                    "filename": "client/src/components/client/inventory/VehicleCard.svelte"
+                },
+                {
+                    "blank": 2,
+                    "code": 15,
+                    "comment": 1,
+                    "filename": "client/src/components/client/inventory/VehicleMedia.svelte"
+                },
+                {
+                    "blank": 10,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "client/src/components/client/inventory/VehicleSpecs.svelte"
+                },
+                {
+                    "blank": 12,
+                    "code": 288,
+                    "comment": 2,
+                    "filename": "client/src/components/client/inventory/VehicleView.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/components/client/layout/Banner.svelte"
+                },
+                {
+                    "blank": 5,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "client/src/components/client/layout/BottomNavbar.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 37,
+                    "comment": 0,
+                    "filename": "client/src/components/client/layout/Footer.svelte"
+                },
+                {
+                    "blank": 6,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "client/src/components/client/Login.svelte"
+                },
+                {
+                    "blank": 16,
+                    "code": 171,
+                    "comment": 4,
+                    "filename": "client/src/components/client/LoginModal.svelte"
+                },
+                {
+                    "blank": 5,
+                    "code": 106,
+                    "comment": 3,
+                    "filename": "client/src/components/client/LoginModal1.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "client/src/components/client/Logout.svelte"
+                },
+                {
+                    "blank": 19,
+                    "code": 100,
+                    "comment": 10,
+                    "filename": "client/src/components/client/Modal.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/components/client/profile/FavoriteView.svelte"
+                },
+                {
+                    "blank": 5,
+                    "code": 226,
+                    "comment": 0,
+                    "filename": "client/src/components/client/ResponsiveHeader.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "client/src/components/client/tire/TireCard.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/components/Messages.svelte"
+                },
+                {
+                    "blank": 4,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client/src/routes/__layout.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "client/src/routes/about/contact.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 99,
+                    "comment": 0,
+                    "filename": "client/src/routes/about/faq.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "client/src/routes/about/index.svelte"
+                },
+                {
+                    "blank": 5,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "client/src/routes/admin/__layout.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "client/src/routes/admin/add-vehicle.svelte"
+                },
+                {
+                    "blank": 8,
+                    "code": 61,
+                    "comment": 0,
+                    "filename": "client/src/routes/admin/admin.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/routes/admin/edit-vehicle.svelte"
+                },
+                {
+                    "blank": 4,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "client/src/routes/admin/index.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/routes/admin/login.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 40,
+                    "comment": 0,
+                    "filename": "client/src/routes/finance/index.svelte"
+                },
+                {
+                    "blank": 6,
+                    "code": 119,
+                    "comment": 0,
+                    "filename": "client/src/routes/index.svelte"
+                },
+                {
+                    "blank": 12,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "client/src/routes/inventory/[id].svelte"
+                },
+                {
+                    "blank": 19,
+                    "code": 195,
+                    "comment": 1,
+                    "filename": "client/src/routes/inventory/index.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/routes/inventory/new.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/routes/inventory/used.svelte"
+                },
+                {
+                    "blank": 4,
+                    "code": 148,
+                    "comment": 0,
+                    "filename": "client/src/routes/login.svelte"
+                },
+                {
+                    "blank": 2,
+                    "code": 113,
+                    "comment": 0,
+                    "filename": "client/src/routes/parts/index.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/routes/profile/favorites.svelte"
+                },
+                {
+                    "blank": 3,
+                    "code": 98,
+                    "comment": 0,
+                    "filename": "client/src/routes/profile/index.svelte"
+                },
+                {
+                    "blank": 11,
+                    "code": 141,
+                    "comment": 0,
+                    "filename": "client/src/routes/register.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "client/src/routes/service/index.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client/src/routes/service/schedule.svelte"
+                },
+                {
+                    "blank": 0,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "client/src/routes/sustainability/index.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "client/src/routes/tires/index.svelte"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "client/src/stores.js"
+                },
+                {
+                    "filename": "client/static/1665101966353.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/static/blob-haikei.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "client/static/car-svgrepo-com.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "client/static/cdnlogo.com_.svg"
+                },
+                {
+                    "filename": "client/static/cool-background (1).png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/cool-background (2).png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/cool-background.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "client/static/cool-background.svg"
+                },
+                {
+                    "filename": "client/static/CreativeWorks-HyundaiSansHead.zip",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/favicon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/fonts/hyundai/HyundaiSansHeadOffice-Medium.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/fonts/hyundai/HyundaiSansHeadOffice-Medium.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/fonts/hyundai/HyundaiSansHeadOffice-Medium.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "client/static/fonts/hyundai/style.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/static/heart.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 47,
+                    "comment": 1,
+                    "filename": "client/static/Hyundai-logo-final.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 51,
+                    "comment": 1,
+                    "filename": "client/static/Hyundai-logo.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/static/hyundai-svgrepo-com.svg"
+                },
+                {
+                    "filename": "client/static/HyundaiSansHeadOffice-Bold.zip",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client/static/HyundaiSansHeadOffice-Medium.zip",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client/static/waves.svg"
+                },
+                {
+                    "blank": 2,
+                    "code": 16,
+                    "comment": 1,
+                    "filename": "client/svelte.config.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 37,
+                    "comment": 1,
+                    "filename": "client/tailwind.config.cjs"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 1,
+                    "filename": "client/vite.config.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "server/.env"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "server/.gitignore"
+                },
+                {
+                    "blank": 7,
+                    "code": 145,
+                    "comment": 0,
+                    "filename": "server/api/controllers/inventoryController.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 64,
+                    "comment": 0,
+                    "filename": "server/api/controllers/userController.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "server/api/middleware/multer.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/api/middleware/passport.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "server/api/middleware/userAuth.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/api/models/customerModel.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/api/models/employeeModel.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "server/api/models/messageModel.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/api/models/serviceModel.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "server/api/models/userModel.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 76,
+                    "comment": 0,
+                    "filename": "server/api/models/vehicleModel.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 22,
+                    "comment": 1,
+                    "filename": "server/api/routes/inventoryRoutes.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "server/api/routes/userRoutes.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "server/api/services/baseService.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 48,
+                    "comment": 0,
+                    "filename": "server/api/services/inventoryService.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "server/api/services/userService.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "server/config/connection.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/config/secrets.txt"
+                },
+                {
+                    "blank": 1,
+                    "code": 2330,
+                    "comment": 0,
+                    "filename": "server/package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "server/package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/README.md"
+                },
+                {
+                    "blank": 6,
+                    "code": 27,
+                    "comment": 6,
+                    "filename": "server/server.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "server/TODO.md"
+                },
+                {
+                    "filename": "server/uploads/A10000/A100000.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10000/A100001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10000/A100002.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10000/A100003.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10000/A100004.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10000/A100005.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10001/A100010.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10001/A100011.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10001/A100012.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10001/A100013.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10001/A100014.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10001/A100015.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10002/A100020.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10002/A100021.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10002/A100022.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10002/A100023.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10003/A100030.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10003/A100031.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10003/A100032.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10003/A100033.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10003/A100034.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10003/A100035.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10004/A100040.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10004/A100041.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10004/A100042.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10004/A100043.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10004/A100044.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10004/A100045.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10006/A100060.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10006/A100061.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10006/A100062.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10006/A100063.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10006/A100064.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100080.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100081.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000810.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000811.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000812.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000813.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000814.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000815.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000816.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000817.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000818.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000819.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100082.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000820.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000821.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000822.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000823.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000824.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000825.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000826.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000827.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000828.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000829.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100083.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000830.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000831.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000832.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000833.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000834.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000835.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000836.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000837.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000838.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000839.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100084.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000840.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000841.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000842.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000843.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000844.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000845.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000846.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000847.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A1000848.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100085.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100086.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100087.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100088.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10008/A100089.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10009/A100090.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10009/A100091.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10009/A100092.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "server/uploads/A10009/A100093.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                }
+            ]
+        }
+    ]
+}

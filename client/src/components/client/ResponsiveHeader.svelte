@@ -1,19 +1,18 @@
 <script>
-  import axios from "axios"
-  import { onMount } from "svelte"
-  import { loggedIn, UserId, UserFavorites } from '../../stores'
-  import Logout from './Logout.svelte'
-  import LoginModal from './LoginModal.svelte'
+  import axios from "axios";
+  import { onMount } from "svelte";
+  import { loggedIn, UserId, UserFavorites } from "../../stores";
+  import Logout from "./Logout.svelte";
+  import LoginModal from "./LoginModal.svelte";
 
-  let authToken
-  let loggedin
+  let authToken;
+  let loggedin;
 
-  loggedIn.subscribe(value => {
-    loggedin = value
-  })
+  loggedIn.subscribe((value) => {
+    loggedin = value;
+  });
   onMount(async () => {
-    authToken = localStorage.getItem("JWT")
-    
+    authToken = localStorage.getItem("JWT");
 
     if (authToken)
       return await axios({
@@ -24,14 +23,17 @@
         },
       })
         .then(function (response) {
-          console.log(response)
-          if (response.statusText == "OK") return (loggedIn.set(true), UserId.set(response.data._id), console.log(response.data.favorites), UserFavorites.set(response.data.favorites))
+          if (response.statusText == "OK")
+            return (
+              loggedIn.set(true),
+              UserId.set(response.data._id),
+              UserFavorites.set(response.data.favorites)
+            );
         })
         .catch(function (err, response) {
-          console.log(err)
-        })
-        
-  })
+          console.log(err);
+        });
+  });
 </script>
 
 <div class="navbar bg-primary z-50 font-hyundai">
@@ -204,21 +206,24 @@
   </div>
   <div class="navbar-end">
     {#if loggedin == true}
-        <div class="dropdown dropdown-end p-0">
-
-          <label tabindex="0" class="btn">
-            <div
+      <div class="dropdown dropdown-end p-0">
+        <label tabindex="0" class="btn">
+          <div
             class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full hover:bg-gray-300"
           >
             <span class="font-medium text-gray-600">SS</span>
-          </label>
-          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/profile/favorites">Favorites</a></li>
-            <li><Logout></Logout></li>
-          </ul>
-        </div>
-        
+          </div></label
+        >
+        <ul
+          tabindex="0"
+          class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/profile/favorites">Favorites</a></li>
+          <li><a href="/profile/messages">Messages</a></li>
+          <li><Logout /></li>
+        </ul>
+      </div>
     {:else}
       <a href="/login" class="btn">Get started</a>
     {/if}

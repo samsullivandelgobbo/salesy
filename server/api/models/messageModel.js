@@ -1,15 +1,33 @@
 const mongoose = require('mongoose')
 const messageSchema = mongoose.Schema({
-  user: {
-    type: ObjectId,
+  fromUser: {
+    type: mongoose.Types.ObjectId,
+    required: true,
+    ref: 'User'
+  },
+  toUser: {
+    type: mongoose.Types.ObjectId,
     required: true,
     ref: 'User'
   },
   message: {
-    type: String, 
+    type: String,
     required: true,
-    max
-  }
+    maxLength: 200
+  },
+  reply: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Message'
+  },
+  vehicle: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Vehicle'
+  },
+  dateSent: {
+    type: Date,
+    default: Date.now,
+    required: true
+  },
 })
 
 module.exports = mongoose.model("Message", messageSchema)

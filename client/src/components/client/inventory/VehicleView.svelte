@@ -1,48 +1,51 @@
 <script>
-  import { onMount } from "svelte"
-  import axios from "axios"
-  import VehicleSpecs from "./VehicleMedia.svelte"
-  import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide"
-  import "@splidejs/svelte-splide/css"
-  import { loggedIn } from "../../../stores"
-  import LoginModal from "../LoginModal.svelte"
-  let loggedin
+  import { onMount } from "svelte";
+  import axios from "axios";
+  import VehicleSpecs from "./VehicleMedia.svelte";
+  import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide";
+  import "@splidejs/svelte-splide/css";
+  import { loggedIn } from "../../../stores";
+  import LoginModal from "../LoginModal.svelte";
+  let loggedin;
 
   loggedIn.subscribe((value) => {
-    loggedin = value
-  })
-  
+    loggedin = value;
+  });
 
   let options = {
     rewind: true,
     autoplay: true,
-  }
+  };
 
-  export let id
-  let data
-  let item
-  let i
-  let photos
-  let title
-  let price
+  export let id;
+  let data;
+  let item;
+  let i;
+  let photos;
+  let title;
+  let price;
+  let odometer;
 
   onMount(async () => {
-    let data = await axios.get(`http://localhost:4000/inventory/stocknum/${id}`)
-    item = data.data[0]
-    title = item.year + " " + item.make + " " + item.model
-    price = item.price
-  })
+    let data = await axios.get(
+      `http://localhost:4000/inventory/stocknum/${id}`
+    );
+    item = data.data[0];
+    title = item.year + " " + item.make + " " + item.model;
+    price = item.price;
+    odometer = item.odometer;
+  });
 
   async function getPhotos() {
     const res = await axios.get(
       `http://localhost:4000/inventory/stocknum/${id}`
-    )
-    const photos = res.data[0].photos
-    console.log(photos)
-    return photos
+    );
+    const photos = res.data[0].photos;
+    console.log(photos);
+    return photos;
   }
 
-  let promise = getPhotos()
+  let promise = getPhotos();
 </script>
 
 <div class="flex flex-col lg:flex-row lg:p-16 sm:p-8">
@@ -89,7 +92,7 @@
             />
             <div class="flex-cols-2">
               <h1 class="px-2 text:medium">Kilometers</h1>
-              <div class="px-4">coco</div>
+              <div class="px-2 text:sm font-light">{odometer}</div>
             </div>
           </div>
           <div class="flex w-8">
