@@ -1,8 +1,2 @@
 node_modules/
-/client/static/
-/server/uploads
-**/uploads/
-**/static
-**/static/
-static/
-uploads/
+.env

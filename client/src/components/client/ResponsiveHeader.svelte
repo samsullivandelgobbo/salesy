@@ -1,7 +1,9 @@
 <script>
   import axios from "axios"
   import { onMount } from "svelte"
-  import { loggedIn } from '../../stores'
+  import { loggedIn, UserId, UserFavorites } from '../../stores'
+  import Logout from './Logout.svelte'
+  import LoginModal from './LoginModal.svelte'
 
   let authToken
   let loggedin
@@ -11,6 +13,7 @@
   })
   onMount(async () => {
     authToken = localStorage.getItem("JWT")
+    
 
     if (authToken)
       return await axios({
@@ -21,12 +24,13 @@
         },
       })
         .then(function (response) {
-          
-          if (response.statusText == "OK") return (loggedIn.set(true))
+          console.log(response)
+          if (response.statusText == "OK") return (loggedIn.set(true), UserId.set(response.data._id), console.log(response.data.favorites), UserFavorites.set(response.data.favorites))
         })
         .catch(function (err, response) {
           console.log(err)
         })
+        
   })
 </script>
 
@@ -211,6 +215,7 @@
           <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
             <li><a href="/profile">Profile</a></li>
             <li><a href="/profile/favorites">Favorites</a></li>
+            <li><Logout></Logout></li>
           </ul>
         </div>
         

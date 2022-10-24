@@ -2,8 +2,8 @@
   import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide"
   import "@splidejs/svelte-splide/css"
   import { loggedIn } from "../stores"
-  import { onMount } from "svelte"
   import axios from "axios"
+  import Login from "../components/client/Login.svelte"
   import VehicleCard from '../components/client/inventory/VehicleCard.svelte'
 
 
@@ -190,6 +190,7 @@
 </div>
 <!-- Put this part before </body> tag -->
 {#if loggedin}
+
 <input type="checkbox" id="my-modal-6" class="modal-toggle" />
 <div class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
@@ -215,7 +216,7 @@
       </div>
     </section>
     <div class="modal-action">
-      <label for="my-modal-6" class="btn">Yay!</label>
+      <label for="my-modal-6" class="btn">Send Message</label>
     </div>
   </div>
 </div>
@@ -224,19 +225,13 @@
 <input type="checkbox" id="my-modal-6" class="modal-toggle" />
 <div class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
-    <section class="bg-white">
-      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">Log in</h2>
-          <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Log in or Sign up to continue</p>
+  
+          <Login/>
 
 
 
 
-      </div>
-    </section>
-    <div class="modal-action">
-      <label for="my-modal-6" class="btn">Yay!</label>
-    </div>
+
   </div>
 </div>
 {/if}

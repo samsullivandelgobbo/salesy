@@ -2,6 +2,9 @@
   import VehicleList from "../../components/client/inventory/InventoryList.svelte"
   import { onMount } from "svelte";
   import axios from "axios";
+  import Login from "../../components/client/Login.svelte"
+
+
   
   let data
   let items
@@ -37,13 +40,11 @@
         continue
       }
     }
-    console.log(fuel)
-    
+
     for (let i = 0; i < items.length; i++) {
       colors.push(items[i].color)
     }
-    console.log(items.specs)
-    console.log(items)
+
     uniqcolors = [...new Set(colors)]
     uniqfuel = [...new Set(fuel)]
     uniqyears = [...new Set(years)]
@@ -127,6 +128,7 @@
 
 
     <VehicleList items={items} data={data} />
+    
   </div>
   <div class="drawer-side lg:sticky">
     <label for="my-drawer-3" class="drawer-overlay" />

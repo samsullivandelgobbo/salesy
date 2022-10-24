@@ -33,9 +33,10 @@ exports.userLogin = async (req, res) => {
           }
           if (result == true) {
             const id = validUser.id
+
             
             const token = JsonWebToken.sign({ id: id }, SECRET)
-            
+
             res.status(200).json({ success: true, token: token })
           }
         })
@@ -47,6 +48,7 @@ exports.getUser = async (req, res) => {
   
     if (req.headers && req.headers.authorization) {
       let authorization = req.headers.authorization
+
       try {
         let decoded = JsonWebToken.verify(authorization, SECRET)
 
@@ -67,3 +69,12 @@ exports.getUser = async (req, res) => {
 
   }
 
+  exports.addFavorite = async (req, res) => {
+    try {
+      const favorite = await userService.addFavorite(req.body.id, req.body.favorite)
+      console.log(req.body)
+      res.status(200).send(favorite)
+    } catch (err) {
+      res.status(500).json({error: err})
+    }
+  }

@@ -31,7 +31,9 @@ class BaseService {
   async findOne(field, value) {
     return await this.model.findOne({[field]: value})
   }
-  
+  async updateArray(id, array, update) {
+    return await this.model.findOneAndUpdate({_id: id}, {$push: {[array]: update}})
+  }
 }
 
 

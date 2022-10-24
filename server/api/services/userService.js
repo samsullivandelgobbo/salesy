@@ -19,6 +19,12 @@ class UserService extends BaseService {
   async getUserbyId(id) {
     return this.findOne('id', id)
   }
+  async updateUser(id, field, object) {
+    return this.update(id, field, object)
+  }
+  async addFavorite(id, object) {
+    return this.updateArray(id, 'favorites', object)
+  }
 }
 
 const userService = new UserService(User)

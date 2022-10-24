@@ -38,7 +38,7 @@
     .then(function (response) {
         console.log(response)
         submitted == true
-        sessionStorage.setItem('JWT', response.data.token)
+        localStorage.setItem('JWT', response.data.token)
         location.assign('/')
     })
     .catch(function (response) {
